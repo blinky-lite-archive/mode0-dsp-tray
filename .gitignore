@@ -15,6 +15,8 @@ node_modules
 .env
 .sessions.json
 .config.json
+.config.nodes.json
+.config.users.json
 *.backup
 
 
