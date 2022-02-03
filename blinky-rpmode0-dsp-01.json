@@ -69,7 +69,7 @@
   "lowPassFilterShift": {
     "action": "setting",
     "type": "scalar",
-    "value": 9,
+    "value": 13,
     "unit": "unit",
     "alarm": {
       "value": 0,
@@ -149,7 +149,7 @@
   "limiterWindow2": {
     "action": "setting",
     "type": "scalar",
-    "value": 10,
+    "value": 100,
     "unit": "%",
     "alarm": {
       "value": 0,
@@ -209,7 +209,7 @@
   "notchFreq": {
     "action": "reading",
     "type": "scalar",
-    "value": 7.659,
+    "value": 15.319,
     "unit": "kHz",
     "alarm": {
       "value": 0,
@@ -229,7 +229,7 @@
   "lpfFreq": {
     "action": "reading",
     "type": "scalar",
-    "value": 38.856,
+    "value": 1.907,
     "unit": "kHz",
     "alarm": {
       "value": 0,
