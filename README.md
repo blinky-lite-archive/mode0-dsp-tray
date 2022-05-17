@@ -1,11 +1,11 @@
-# mirrotron-rf-src-tray
+# blinky-rpmode0-dsp-tray
 ## need to add .env file with the following
-MQTTSUBSCRIBE=mirrotron/rf-src/01/setting/#  
-MQTTCLIENTID=mirrotron-rf-src-tray-01  
+MQTTSUBSCRIBE=blnky-lite-v4/blinky-rpmode0-dsp/01/setting/#  
+MQTTCLIENTID=blinky-rpmode0-dsp-01  
 MQTTSERVERIP=something.cloudmqtt.com  
 MQTTUSERNAME=xxxx  
 MQTTPASSWORD=yyyy  
-PM2NAME=rf-src  
+PM2NAME=blinky-rpmode0-dsp-01  
 NODEREDCONFIGSECRET=a-secret-key    
 
 with no CR after the last line
