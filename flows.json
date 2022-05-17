@@ -1,21 +1,13 @@
 [
     {
-        "id": "fc714a7ef7d3c130",
+        "id": "85e21fcb925ef32f",
         "type": "tab",
-        "label": "blinky-rpmode0-dsp-tray",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "b8a9252872fb4fd5",
-        "type": "tab",
-        "label": "WebApp",
+        "label": "mirrotron-rf-src-tray",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "8341090a.df9758",
+        "id": "f263c88e76d81e0e",
         "type": "subflow",
         "name": "App HTML",
         "info": "",
@@ -26,7 +18,7 @@
                 "y": 80,
                 "wires": [
                     {
-                        "id": "00241d84aa298f73"
+                        "id": "41dcdaf99772ea0f"
                     }
                 ]
             }
@@ -152,15 +144,15 @@
         "sessionExpiry": ""
     },
     {
-        "id": "44b51478.9c022c",
+        "id": "ac3949857e66d37f",
         "type": "websocket-listener",
         "path": "/blinky-rpmode0-dsp/websocket",
         "wholemsg": "false"
     },
     {
-        "id": "00241d84aa298f73",
+        "id": "41dcdaf99772ea0f",
         "type": "template",
-        "z": "8341090a.df9758",
+        "z": "f263c88e76d81e0e",
         "name": "CSS",
         "field": "payload.css",
         "fieldType": "msg",
@@ -172,14 +164,14 @@
         "y": 80,
         "wires": [
             [
-                "8b1b1ae581d103d9"
+                "f102d4c758cb7808"
             ]
         ]
     },
     {
-        "id": "8b1b1ae581d103d9",
+        "id": "f102d4c758cb7808",
         "type": "template",
-        "z": "8341090a.df9758",
+        "z": "f263c88e76d81e0e",
         "name": "navBar",
         "field": "payload.navBar",
         "fieldType": "msg",
@@ -191,14 +183,14 @@
         "y": 80,
         "wires": [
             [
-                "aa55df662ee9abf1"
+                "e328d23be9b91637"
             ]
         ]
     },
     {
-        "id": "274cfda7679f72f2",
+        "id": "1e33374a4cbb0cef",
         "type": "template",
-        "z": "8341090a.df9758",
+        "z": "f263c88e76d81e0e",
         "name": "HTML",
         "field": "payload",
         "fieldType": "msg",
@@ -210,14 +202,14 @@
         "y": 80,
         "wires": [
             [
-                "047c62aa77e0592a"
+                "fd89d9b498263021"
             ]
         ]
     },
     {
-        "id": "c550163cc649c519",
+        "id": "1824fcb8f7de1f61",
         "type": "template",
-        "z": "8341090a.df9758",
+        "z": "f263c88e76d81e0e",
         "name": "Foot",
         "field": "payload.foot",
         "fieldType": "msg",
@@ -229,14 +221,14 @@
         "y": 80,
         "wires": [
             [
-                "1ae046424a3f7c07"
+                "b1f1d01cc76fda56"
             ]
         ]
     },
     {
-        "id": "2bf1933e15f344a7",
+        "id": "43a3aeca5c32419b",
         "type": "template",
-        "z": "8341090a.df9758",
+        "z": "f263c88e76d81e0e",
         "name": "Head",
         "field": "payload.head",
         "fieldType": "msg",
@@ -248,14 +240,14 @@
         "y": 80,
         "wires": [
             [
-                "c550163cc649c519"
+                "1824fcb8f7de1f61"
             ]
         ]
     },
     {
-        "id": "047c62aa77e0592a",
+        "id": "fd89d9b498263021",
         "type": "http response",
-        "z": "8341090a.df9758",
+        "z": "f263c88e76d81e0e",
         "name": "",
         "statusCode": "",
         "headers": {},
@@ -264,9 +256,9 @@
         "wires": []
     },
     {
-        "id": "963ebd0f5a6f6ddf",
+        "id": "630b50e54335f770",
         "type": "template",
-        "z": "8341090a.df9758",
+        "z": "f263c88e76d81e0e",
         "name": "Utility Scripts",
         "field": "payload.utilityScripts",
         "fieldType": "msg",
@@ -278,14 +270,14 @@
         "y": 80,
         "wires": [
             [
-                "2bf1933e15f344a7"
+                "43a3aeca5c32419b"
             ]
         ]
     },
     {
-        "id": "aa55df662ee9abf1",
+        "id": "e328d23be9b91637",
         "type": "function",
-        "z": "8341090a.df9758",
+        "z": "f263c88e76d81e0e",
         "name": "Get project name and userID",
         "func": "function getRandomInt(max)\n{\n  return Math.floor(Math.random() * Math.floor(max));\n}\nmsg.payload['project'] = global.get('project')\nmsg.payload['userID'] = getRandomInt(32768);\nreturn msg;",
         "outputs": 1,
@@ -296,14 +288,14 @@
         "y": 80,
         "wires": [
             [
-                "963ebd0f5a6f6ddf"
+                "630b50e54335f770"
             ]
         ]
     },
     {
-        "id": "1ae046424a3f7c07",
+        "id": "b1f1d01cc76fda56",
         "type": "template",
-        "z": "8341090a.df9758",
+        "z": "f263c88e76d81e0e",
         "name": "html.websocket",
         "field": "payload.html.websocket",
         "fieldType": "msg",
@@ -315,14 +307,14 @@
         "y": 80,
         "wires": [
             [
-                "01b447bebf70c342"
+                "8dcfd69e627cd25e"
             ]
         ]
     },
     {
-        "id": "01b447bebf70c342",
+        "id": "8dcfd69e627cd25e",
         "type": "function",
-        "z": "8341090a.df9758",
+        "z": "f263c88e76d81e0e",
         "name": "IP filter",
         "func": "var ipfilter = [\n    \"127.0.0.16\"];\nvar ipAddress = ( msg.req.headers['x-forwarded-for'] || '').split(',').pop() || \n          msg.req.connection.remoteAddress || \n          msg.req.socket.remoteAddress || \n          msg.req.connection.socket.remoteAddress;\nif (ipAddress==undefined) return null;\nvar ipAddressSplit = ipAddress.split(\".\");\nfor (var ii =  0; ii < ipfilter.length; ++ii)\n{\n    var ipfilterSplit = ipfilter[ii].split(\".\");\n    if (ipAddress == ipfilter[ii])\n    { \n        return null;\n    }\n    if (ipfilterSplit[2] == '*')\n    {\n        if ((ipfilterSplit[0] == ipAddressSplit[0]) && (ipfilterSplit[1] == ipAddressSplit[1]))\n        {\n            return null;\n        }\n    }\n}\n\n\nreturn msg;",
         "outputs": 1,
@@ -333,34 +325,54 @@
         "y": 80,
         "wires": [
             [
-                "274cfda7679f72f2"
+                "1e33374a4cbb0cef"
             ]
         ]
     },
     {
-        "id": "1dbf0b4d0884456b",
+        "id": "30f384ea.cf21fc",
         "type": "function",
-        "z": "fc714a7ef7d3c130",
-        "name": "Save device config in Memory",
-        "func": "msg.payload.settingInProgress = 1;\nglobal.set('device', msg.payload);\nreturn msg;",
+        "z": "85e21fcb925ef32f",
+        "name": "Save tray config in Memory",
+        "func": "msg.payload.watchdog.value = 0;\nglobal.set('settingInProgress', true);\nglobal.set('tray', msg.payload);\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 850,
+        "x": 840,
         "y": 60,
         "wires": [
             [
-                "5502095eee47e779"
+                "ebb5481bd4277b24"
             ]
         ]
     },
     {
-        "id": "82d85d31875ae660",
+        "id": "5023092b.a0fe38",
+        "type": "mqtt in",
+        "z": "85e21fcb925ef32f",
+        "name": "Subscribe Settings",
+        "topic": "$(MQTTSUBSCRIBE)",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "79250bf3.365cc4",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 130,
+        "y": 200,
+        "wires": [
+            [
+                "f812bb6a.1aec68"
+            ]
+        ]
+    },
+    {
+        "id": "49c7b59e.00e86c",
         "type": "inject",
-        "z": "fc714a7ef7d3c130",
-        "name": "deviceA",
+        "z": "85e21fcb925ef32f",
+        "name": "read Tray",
         "props": [
             {
                 "p": "payload"
@@ -374,39 +386,40 @@
         "crontab": "",
         "once": true,
         "onceDelay": "2",
-        "topic": "deviceA",
-        "payload": "MQTTDEVICEA",
+        "topic": "readTraydesc",
+        "payload": "MQTTSUBSCRIBE",
         "payloadType": "env",
         "x": 120,
         "y": 60,
         "wires": [
             [
-                "ea2bda3a2d48f831"
+                "f7b2b73c.569598"
             ]
         ]
     },
     {
-        "id": "5f5f0f13dabab6db",
+        "id": "4a8d91e8.fcb68",
         "type": "file in",
-        "z": "fc714a7ef7d3c130",
-        "name": "Read device config",
-        "filename": "",
+        "z": "85e21fcb925ef32f",
+        "name": "Read tray config",
+        "filename": "tray.json",
         "format": "utf8",
         "chunk": false,
         "sendError": false,
         "encoding": "none",
-        "x": 490,
+        "allProps": false,
+        "x": 480,
         "y": 60,
         "wires": [
             [
-                "e59532cc9fb3bcb5"
+                "4b0be623.7f7b88"
             ]
         ]
     },
     {
-        "id": "e59532cc9fb3bcb5",
+        "id": "4b0be623.7f7b88",
         "type": "json",
-        "z": "fc714a7ef7d3c130",
+        "z": "85e21fcb925ef32f",
         "name": "",
         "property": "payload",
         "action": "obj",
@@ -415,16 +428,16 @@
         "y": 60,
         "wires": [
             [
-                "1dbf0b4d0884456b"
+                "30f384ea.cf21fc"
             ]
         ]
     },
     {
-        "id": "ea2bda3a2d48f831",
+        "id": "f7b2b73c.569598",
         "type": "function",
-        "z": "fc714a7ef7d3c130",
+        "z": "85e21fcb925ef32f",
         "name": "Init flow Variables",
-        "func": "var mqttSplit = msg.payload.split('/');\nvar deviceProps = {\n    project     :   mqttSplit[0],\n    deviceType  :   mqttSplit[1],\n    name        :   mqttSplit[2],\n    configFile  :   mqttSplit[1] + '-' + mqttSplit[2] + '.json',\n    mapFile     :   mqttSplit[1] + '-' + mqttSplit[2] + '-map.json'\n};\nglobal.set('deviceProps',deviceProps);\nreturn {topic: 'readFile', 'filename':deviceProps.configFile};",
+        "func": "var mqttSplit = msg.payload.split('/');\nvar trayProps = {\n    box         :   mqttSplit[0],\n    type        :   mqttSplit[1],\n    name        :   mqttSplit[2],\n};\nglobal.set('trayProps',trayProps);\nglobal.set('settingInProgress', false);\n\nreturn {topic: 'readFile', payload:true};",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -434,81 +447,65 @@
         "y": 60,
         "wires": [
             [
-                "5f5f0f13dabab6db"
+                "4a8d91e8.fcb68"
             ]
         ]
     },
     {
-        "id": "d7cfae5dedb833b9",
+        "id": "168ce872.83d788",
         "type": "file",
-        "z": "fc714a7ef7d3c130",
+        "z": "85e21fcb925ef32f",
         "name": "Init Settings",
-        "filename": "",
+        "filename": "tray.json",
         "appendNewline": true,
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 1190,
-        "y": 340,
+        "x": 1290,
+        "y": 420,
         "wires": [
             []
         ]
     },
     {
-        "id": "d69ea66c02bf4a9f",
+        "id": "89892a30.598e28",
         "type": "function",
-        "z": "fc714a7ef7d3c130",
+        "z": "85e21fcb925ef32f",
         "name": "Save Settings to File",
-        "func": "var jsonPretty = JSON.stringify(global.get('device'),null,2);\nreturn {topic: msg.payload, payload:jsonPretty, 'filename':global.get('deviceProps').configFile};",
+        "func": "var jsonPretty = JSON.stringify(global.get('tray'),null,2);\nreturn {topic: msg.payload, payload:jsonPretty};",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1000,
-        "y": 340,
+        "x": 1100,
+        "y": 420,
         "wires": [
             [
-                "d7cfae5dedb833b9"
+                "168ce872.83d788"
             ]
         ]
     },
     {
-        "id": "09c2e8c5be726aa1",
-        "type": "link in",
-        "z": "fc714a7ef7d3c130",
-        "name": "Device A web socket in",
-        "links": [
-            "468560f300303ae4"
-        ],
-        "x": 55,
-        "y": 240,
-        "wires": [
-            [
-                "f8855d6f7b4a2d66"
-            ]
-        ]
-    },
-    {
-        "id": "4a32d6bc7f2733ad",
+        "id": "f812bb6a.1aec68",
         "type": "json",
-        "z": "fc714a7ef7d3c130",
+        "z": "85e21fcb925ef32f",
         "name": "",
         "property": "payload",
         "action": "obj",
         "pretty": false,
         "x": 310,
-        "y": 160,
+        "y": 200,
         "wires": [
             [
-                "468cc6b861fe92a6"
+                "e0d2b8e49c2e469b"
             ]
         ]
     },
     {
-        "id": "763e993c4a211e18",
+        "id": "c0939e4a.6386f",
         "type": "exec",
-        "z": "fc714a7ef7d3c130",
+        "z": "85e21fcb925ef32f",
         "command": "pm2 restart ",
         "addpay": "payload",
         "append": "",
@@ -518,7 +515,7 @@
         "oldrc": false,
         "name": "Restart",
         "x": 700,
-        "y": 1460,
+        "y": 1240,
         "wires": [
             [],
             [],
@@ -526,9 +523,9 @@
         ]
     },
     {
-        "id": "125759052253fbf7",
+        "id": "9e290594.69c548",
         "type": "switch",
-        "z": "fc714a7ef7d3c130",
+        "z": "85e21fcb925ef32f",
         "name": "Reset Tray",
         "property": "payload",
         "propertyType": "msg",
@@ -548,20 +545,20 @@
         "repair": false,
         "outputs": 2,
         "x": 310,
-        "y": 1540,
+        "y": 1260,
         "wires": [
             [
-                "5a4c5866bec23443"
+                "985cd59b3e414efe"
             ],
             [
-                "5955c35da3b4c8b3"
+                "236a8168.66f7fe"
             ]
         ]
     },
     {
-        "id": "5955c35da3b4c8b3",
+        "id": "236a8168.66f7fe",
         "type": "exec",
-        "z": "fc714a7ef7d3c130",
+        "z": "85e21fcb925ef32f",
         "command": "sudo reboot",
         "addpay": false,
         "append": "",
@@ -570,7 +567,7 @@
         "oldrc": false,
         "name": "Reboot",
         "x": 500,
-        "y": 1580,
+        "y": 1300,
         "wires": [
             [],
             [],
@@ -578,9 +575,9 @@
         ]
     },
     {
-        "id": "b888285806aa88bd",
+        "id": "557e4f40.b904e",
         "type": "delay",
-        "z": "fc714a7ef7d3c130",
+        "z": "85e21fcb925ef32f",
         "name": "",
         "pauseType": "delay",
         "timeout": "2",
@@ -595,76 +592,63 @@
         "allowrate": false,
         "outputs": 1,
         "x": 160,
-        "y": 1540,
+        "y": 1260,
         "wires": [
             [
-                "125759052253fbf7"
+                "9e290594.69c548"
             ]
         ]
     },
     {
-        "id": "8910365837ba1b21",
-        "type": "function",
-        "z": "fc714a7ef7d3c130",
-        "name": "Prepare MQTT topic",
-        "func": "var mqttArray = msg.topic.split('/');\nvar device = \n{\n    project     : mqttArray[0],\n    deviceType  : mqttArray[1],\n    name        : mqttArray[2],\n    prop        : mqttArray[3],\n};\nreturn {topic : msg.topic, payload:{topic:'readings', mqttDevice : device, payload:msg.payload}};",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 1180,
-        "y": 260,
-        "wires": [
-            [
-                "7ac9b7947c52a846"
-            ]
-        ]
-    },
-    {
-        "id": "7ac9b7947c52a846",
-        "type": "link out",
-        "z": "fc714a7ef7d3c130",
-        "name": "Device A web socket out",
-        "mode": "link",
-        "links": [
-            "9badb025c96f9f01"
-        ],
-        "x": 1315,
-        "y": 260,
+        "id": "5152879001ec63ea",
+        "type": "mqtt out",
+        "z": "85e21fcb925ef32f",
+        "name": "Publish Readings",
+        "topic": "",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "79250bf3.365cc4",
+        "x": 1250,
+        "y": 340,
         "wires": []
     },
     {
-        "id": "9a228e0adf30e98d",
+        "id": "4493527757138cdc",
         "type": "link out",
-        "z": "fc714a7ef7d3c130",
+        "z": "85e21fcb925ef32f",
         "name": "New Setting In",
         "links": [
-            "35af9d0d393383db"
+            "4bddb9a0e424ebf4"
         ],
         "x": 755,
         "y": 140,
         "wires": []
     },
     {
-        "id": "35af9d0d393383db",
+        "id": "4bddb9a0e424ebf4",
         "type": "link in",
-        "z": "fc714a7ef7d3c130",
+        "z": "85e21fcb925ef32f",
         "name": "blinkybus setting in",
         "links": [
-            "9a228e0adf30e98d"
+            "4493527757138cdc"
         ],
         "x": 55,
         "y": 380,
         "wires": [
             [
-                "6e3c2a40692c9615"
+                "fcc98447c16c3949"
             ]
         ]
     },
     {
-        "id": "04ef56eea3ce5457",
+        "id": "f9be9054ce456982",
         "type": "switch",
-        "z": "fc714a7ef7d3c130",
+        "z": "85e21fcb925ef32f",
         "name": "",
         "property": "topic",
         "propertyType": "msg",
@@ -694,26 +678,26 @@
         "repair": false,
         "outputs": 4,
         "x": 650,
-        "y": 160,
+        "y": 200,
         "wires": [
             [
-                "9a228e0adf30e98d"
+                "4493527757138cdc"
             ],
             [
-                "ceecf1e1066de43d"
+                "91cded1b31446957"
             ],
             [
-                "cc968758c56998fe"
+                "c81b72b9290d1c36"
             ],
             [
-                "68b6d779d98136e6"
+                "72b5ca0e2043aba0"
             ]
         ]
     },
     {
-        "id": "468cc6b861fe92a6",
+        "id": "e0d2b8e49c2e469b",
         "type": "function",
-        "z": "fc714a7ef7d3c130",
+        "z": "85e21fcb925ef32f",
         "name": "Filter MQTT",
         "func": "return {topic:msg.topic.split('/')[4], payload:msg.payload};",
         "outputs": 1,
@@ -722,332 +706,178 @@
         "finalize": "",
         "libs": [],
         "x": 470,
-        "y": 160,
+        "y": 200,
         "wires": [
             [
-                "04ef56eea3ce5457"
+                "f9be9054ce456982"
             ]
         ]
     },
     {
-        "id": "f9560205de99e05d",
+        "id": "f75b9887786b11c4",
         "type": "function",
-        "z": "fc714a7ef7d3c130",
-        "name": "Shift Msg",
-        "func": "return msg.payload;",
+        "z": "85e21fcb925ef32f",
+        "name": "Publish tray",
+        "func": "if (!msg.payload) return null;\nvar tray = global.get('tray');\nvar newMsg = \n{\n    topic: global.get('trayProps').box + '/' + global.get('trayProps').type + '/' + global.get('trayProps').name + '/reading',\n    payload: JSON.stringify(tray)\n};\nreturn  newMsg;  \n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 280,
-        "y": 240,
+        "x": 1070,
+        "y": 340,
         "wires": [
             [
-                "2adf06457508d99a"
+                "5152879001ec63ea"
             ]
         ]
     },
     {
-        "id": "2adf06457508d99a",
-        "type": "function",
-        "z": "fc714a7ef7d3c130",
-        "name": "Filter Websocket",
-        "func": "var inputDeviceProps = msg.payload.topic.split('/');\nvar deviceProps = global.get('deviceProps')\nif (inputDeviceProps[0] != deviceProps.project) return null;\nif (inputDeviceProps[1] != deviceProps.deviceType) return null;\nif (inputDeviceProps[2] != deviceProps.name) return null;\nreturn {topic:msg.topic, payload:msg.payload.payload};\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 460,
-        "y": 240,
-        "wires": [
-            [
-                "04ef56eea3ce5457"
-            ]
-        ]
-    },
-    {
-        "id": "f8855d6f7b4a2d66",
-        "type": "json",
-        "z": "fc714a7ef7d3c130",
-        "name": "",
-        "property": "payload",
-        "action": "obj",
-        "pretty": false,
-        "x": 150,
-        "y": 240,
-        "wires": [
-            [
-                "f9560205de99e05d"
-            ]
-        ]
-    },
-    {
-        "id": "502890a6eef6ab45",
-        "type": "function",
-        "z": "fc714a7ef7d3c130",
-        "name": "Publish device",
-        "func": "if (!msg.payload) return null;\nvar device = global.get('device');\nvar newMsg = \n{\n    topic: global.get('deviceProps').project + '/' + global.get('deviceProps').deviceType + '/' + global.get('deviceProps').name + '/reading',\n    payload: JSON.stringify(device)\n};\nreturn  newMsg;  \n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 960,
-        "y": 220,
-        "wires": [
-            [
-                "8910365837ba1b21",
-                "5804018e81fd87a6"
-            ]
-        ]
-    },
-    {
-        "id": "646fa4e3e8a44ef2",
+        "id": "45a97566b65c65cc",
         "type": "link in",
-        "z": "fc714a7ef7d3c130",
-        "name": "Publish Device In",
+        "z": "85e21fcb925ef32f",
+        "name": "Publish Tray In",
         "links": [
-            "34be1cac9a79dec1",
-            "ceecf1e1066de43d",
-            "5205ea3ffe7e0431",
-            "abdd37c2f412350b",
-            "d3aa6fd2c11c5ba5",
-            "a7ab779c518cf1f2",
-            "34c3c3d0e79bb93a",
-            "6ade9e39ae541696",
-            "d433a4af56090639",
-            "4bab782ef6b8962f"
+            "0bf699584a2609d5",
+            "1e34df4b19ff22cc",
+            "6af21e76e0c4ad80",
+            "86aff585d6d97f09",
+            "91cded1b31446957",
+            "a66ef2e5b482662a",
+            "df03212a7e41deb1",
+            "f0c1e263384a520f",
+            "f5d0568e288098ed",
+            "3fc0261f194a7067",
+            "396e4a58f43bbdef",
+            "dc7936fb55cf6c52"
         ],
-        "x": 835,
-        "y": 220,
+        "x": 955,
+        "y": 340,
         "wires": [
             [
-                "502890a6eef6ab45"
+                "f75b9887786b11c4"
             ]
         ]
     },
     {
-        "id": "ceecf1e1066de43d",
+        "id": "91cded1b31446957",
         "type": "link out",
-        "z": "fc714a7ef7d3c130",
+        "z": "85e21fcb925ef32f",
         "name": "Ping Out",
         "links": [
-            "646fa4e3e8a44ef2"
+            "45a97566b65c65cc",
+            "05c0c7b4f59ca88d"
         ],
         "x": 755,
         "y": 180,
         "wires": []
     },
     {
-        "id": "5205ea3ffe7e0431",
+        "id": "c81b72b9290d1c36",
         "type": "link out",
-        "z": "fc714a7ef7d3c130",
-        "name": "Create Setting out",
-        "links": [
-            "646fa4e3e8a44ef2"
-        ],
-        "x": 315,
-        "y": 380,
-        "wires": []
-    },
-    {
-        "id": "fafc4717b4f07a59",
-        "type": "function",
-        "z": "fc714a7ef7d3c130",
-        "name": "Pause Device readings",
-        "func": "var device = global.get('device');\ndevice.settingInProgress = 1;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 210,
-        "y": 520,
-        "wires": [
-            [
-                "6e82293266215924",
-                "d3aa6fd2c11c5ba5"
-            ]
-        ]
-    },
-    {
-        "id": "cc968758c56998fe",
-        "type": "link out",
-        "z": "fc714a7ef7d3c130",
+        "z": "85e21fcb925ef32f",
         "name": "Config Out",
         "links": [
-            "184437d7312bb950"
+            "720ccfb4b4949146"
         ],
         "x": 755,
         "y": 220,
         "wires": []
     },
     {
-        "id": "184437d7312bb950",
+        "id": "720ccfb4b4949146",
         "type": "link in",
-        "z": "fc714a7ef7d3c130",
-        "name": "Pause Device Readings in",
+        "z": "85e21fcb925ef32f",
+        "name": "Pause Tray Readings in",
         "links": [
-            "cc968758c56998fe"
+            "c81b72b9290d1c36"
         ],
         "x": 55,
         "y": 520,
         "wires": [
             [
-                "fafc4717b4f07a59"
+                "b82f13a5e04e195a"
             ]
         ]
     },
     {
-        "id": "6e82293266215924",
-        "type": "delay",
-        "z": "fc714a7ef7d3c130",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "1",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 440,
-        "y": 520,
-        "wires": [
-            [
-                "84754d58522f0c22"
-            ]
-        ]
-    },
-    {
-        "id": "84754d58522f0c22",
+        "id": "47de6287cc26419f",
         "type": "function",
-        "z": "fc714a7ef7d3c130",
+        "z": "85e21fcb925ef32f",
         "name": "Save config file",
-        "func": "global.set('device',JSON.parse(JSON.stringify(msg.payload)));\nvar device = global.get('device');\ndevice.settingInProgress = 1;\n\nreturn {topic:'deviceConfigCompleted', payload:true};",
+        "func": "let cubeAlarm = global.get('tray')[msg.payload.cube].alarm;\ncubeAlarm.limits.lolo = msg.payload.limits.lolo;\ncubeAlarm.limits.low  = msg.payload.limits.low;\ncubeAlarm.limits.high = msg.payload.limits.high;\ncubeAlarm.limits.hihi = msg.payload.limits.hihi;\ncubeAlarm.notify.name = msg.payload.notify.name;\ncubeAlarm.notify.number = msg.payload.notify.number;\nreturn {topic:'trayConfigCompleted', payload:true};",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 620,
+        "x": 500,
         "y": 520,
         "wires": [
             [
-                "b2be601ae02563d0",
-                "2aa20fd7e206759f"
+                "eec56d72bdbd1430",
+                "501090a1fd5f88f5"
             ]
         ]
     },
     {
-        "id": "b2be601ae02563d0",
-        "type": "delay",
-        "z": "fc714a7ef7d3c130",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "1",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 820,
-        "y": 520,
-        "wires": [
-            [
-                "c08915bcbfd8d0af"
-            ]
-        ]
-    },
-    {
-        "id": "c08915bcbfd8d0af",
+        "id": "2cd296fd87868cea",
         "type": "function",
-        "z": "fc714a7ef7d3c130",
-        "name": "Continue Device readings",
-        "func": "var device = global.get('device');\ndevice.settingInProgress = 0;\nreturn msg;",
+        "z": "85e21fcb925ef32f",
+        "name": "Continue Tray readings",
+        "func": "global.set('settingInProgress',false)\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1030,
+        "x": 870,
         "y": 520,
         "wires": [
             [
-                "a7ab779c518cf1f2"
+                "df03212a7e41deb1"
             ]
         ]
     },
     {
-        "id": "fc83bd0b358f2c44",
+        "id": "04d132d87ffeb91a",
         "type": "link in",
-        "z": "fc714a7ef7d3c130",
+        "z": "85e21fcb925ef32f",
         "name": "Save Settings to file in",
         "links": [
-            "abdd37c2f412350b",
-            "2aa20fd7e206759f",
-            "6ade9e39ae541696",
-            "4bab782ef6b8962f"
+            "6af21e76e0c4ad80",
+            "501090a1fd5f88f5",
+            "1e34df4b19ff22cc",
+            "75aab98047eea696",
+            "344a2a68c26672b2",
+            "9f8c3b4630e734a3",
+            "93758a55568a2f76"
         ],
-        "x": 855,
-        "y": 340,
+        "x": 955,
+        "y": 420,
         "wires": [
             [
-                "d69ea66c02bf4a9f"
+                "89892a30.598e28"
             ]
         ]
     },
     {
-        "id": "d3aa6fd2c11c5ba5",
+        "id": "df03212a7e41deb1",
         "type": "link out",
-        "z": "fc714a7ef7d3c130",
-        "name": "Pause Device Readings out",
-        "links": [
-            "646fa4e3e8a44ef2"
-        ],
-        "x": 395,
-        "y": 480,
-        "wires": []
-    },
-    {
-        "id": "2aa20fd7e206759f",
-        "type": "link out",
-        "z": "fc714a7ef7d3c130",
-        "name": "Save config file out",
-        "links": [
-            "fc83bd0b358f2c44"
-        ],
-        "x": 775,
-        "y": 480,
-        "wires": []
-    },
-    {
-        "id": "a7ab779c518cf1f2",
-        "type": "link out",
-        "z": "fc714a7ef7d3c130",
+        "z": "85e21fcb925ef32f",
         "name": "Continue Devie Readings out",
         "links": [
-            "646fa4e3e8a44ef2"
+            "45a97566b65c65cc",
+            "05c0c7b4f59ca88d"
         ],
-        "x": 1175,
+        "x": 1015,
         "y": 520,
         "wires": []
     },
     {
-        "id": "8541bf8d6f84f1ee",
+        "id": "c2d22bcc1f4cf7b0",
         "type": "inject",
-        "z": "fc714a7ef7d3c130",
+        "z": "85e21fcb925ef32f",
         "name": "Archive clock",
         "props": [
             {
@@ -1061,23 +891,23 @@
         "repeat": "1",
         "crontab": "",
         "once": true,
-        "onceDelay": "8",
+        "onceDelay": "20",
         "topic": "archiveClock",
         "payloadType": "date",
         "x": 140,
         "y": 780,
         "wires": [
             [
-                "d3c71911d85858bf"
+                "6a9b2f2af2f7d084"
             ]
         ]
     },
     {
-        "id": "d3c71911d85858bf",
+        "id": "6a9b2f2af2f7d084",
         "type": "function",
-        "z": "fc714a7ef7d3c130",
+        "z": "85e21fcb925ef32f",
         "name": "Archive Pulse",
-        "func": "var device = global.get('device');\nvar lastArchive = context.get('lastArchive');\nvar now = new Date().getTime();\nif ((now - lastArchive) <= device.arcPeriod) return null;\ncontext.set('lastArchive', now);\nreturn {topic:'archivePulse', payload:true};",
+        "func": "var tray = global.get('tray');\nvar lastArchive = context.get('lastArchive');\nvar now = new Date().getTime();\nif ((now - lastArchive) <= tray.arcPeriod) return null;\ncontext.set('lastArchive', now);\nreturn {topic:'archivePulse', payload:true};",
         "outputs": 1,
         "noerr": 0,
         "initialize": "// Code added here will be run once\n// whenever the node is started.\ncontext.set('lastArchive', new Date().getTime());",
@@ -1087,79 +917,75 @@
         "y": 780,
         "wires": [
             [
-                "34c3c3d0e79bb93a"
+                "d74e019a27b1a659"
             ]
         ]
     },
     {
-        "id": "34c3c3d0e79bb93a",
+        "id": "72b5ca0e2043aba0",
         "type": "link out",
-        "z": "fc714a7ef7d3c130",
-        "name": "Archive Pulse Out",
-        "links": [
-            "646fa4e3e8a44ef2"
-        ],
-        "x": 475,
-        "y": 780,
-        "wires": []
-    },
-    {
-        "id": "68b6d779d98136e6",
-        "type": "link out",
-        "z": "fc714a7ef7d3c130",
+        "z": "85e21fcb925ef32f",
         "name": "Reset Out",
         "links": [
-            "9e31e2d0e1f93536"
+            "6c366c9b4d8b8f19"
         ],
         "x": 755,
         "y": 260,
         "wires": []
     },
     {
-        "id": "9e31e2d0e1f93536",
+        "id": "6c366c9b4d8b8f19",
         "type": "link in",
-        "z": "fc714a7ef7d3c130",
+        "z": "85e21fcb925ef32f",
         "name": "Reset in",
         "links": [
-            "68b6d779d98136e6"
+            "72b5ca0e2043aba0"
         ],
         "x": 55,
-        "y": 1540,
+        "y": 1260,
         "wires": [
             [
-                "b888285806aa88bd"
+                "557e4f40.b904e"
             ]
         ]
     },
     {
-        "id": "5804018e81fd87a6",
+        "id": "6af76a294daa96eb",
         "type": "function",
-        "z": "fc714a7ef7d3c130",
-        "name": "Check ArchiveNow",
-        "func": "var device = global.get(\"device\");\nvar resetArchiveNowMsg = null;\nif (device.archiveNow > 0) resetArchiveNowMsg = {topic:\"resetArchiveNow\", payload:true};\nreturn [msg,resetArchiveNowMsg];",
-        "outputs": 2,
+        "z": "85e21fcb925ef32f",
+        "name": "Save flow env variables",
+        "func": "global.set(msg.topic,msg.payload);\nreturn null;",
+        "outputs": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1170,
-        "y": 180,
-        "wires": [
-            [
-                "4df443a2b491160c"
-            ],
-            [
-                "7610bc5473940215"
-            ]
-        ]
+        "x": 330,
+        "y": 1120,
+        "wires": []
     },
     {
-        "id": "7610bc5473940215",
+        "id": "93758a55568a2f76",
+        "type": "link out",
+        "z": "85e21fcb925ef32f",
+        "name": "Tray Setting In",
+        "mode": "link",
+        "links": [
+            "b0f91914917b2de1",
+            "04d132d87ffeb91a",
+            "e9a01e5bc2f140ef"
+        ],
+        "x": 335,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "ebb5481bd4277b24",
         "type": "delay",
-        "z": "fc714a7ef7d3c130",
+        "z": "85e21fcb925ef32f",
         "name": "",
         "pauseType": "delay",
-        "timeout": "1",
+        "timeout": "3",
         "timeoutUnits": "seconds",
         "rate": "1",
         "nbRateUnits": "1",
@@ -1170,62 +996,18 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1410,
-        "y": 240,
+        "x": 1040,
+        "y": 60,
         "wires": [
             [
-                "1e43031a6c3c19fa"
+                "b018aa03d43d5655"
             ]
         ]
     },
     {
-        "id": "1e43031a6c3c19fa",
-        "type": "function",
-        "z": "fc714a7ef7d3c130",
-        "name": "Reset ArchiveNow",
-        "func": "global.get(\"device\").archiveNow = 0;\n",
-        "outputs": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1590,
-        "y": 240,
-        "wires": []
-    },
-    {
-        "id": "613c8f87295fc26b",
-        "type": "function",
-        "z": "fc714a7ef7d3c130",
-        "name": "Save flow env variables",
-        "func": "global.set(msg.topic,msg.payload);\nreturn null;",
-        "outputs": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 330,
-        "y": 900,
-        "wires": []
-    },
-    {
-        "id": "053889cc4e7fe020",
-        "type": "link out",
-        "z": "fc714a7ef7d3c130",
-        "name": "Device Setting In",
-        "mode": "link",
-        "links": [
-            "46746c283302f20c",
-            "4d954311b75f11d2"
-        ],
-        "x": 315,
-        "y": 340,
-        "wires": []
-    },
-    {
-        "id": "48b2aeeda28e07f5",
+        "id": "10e54acd6f4f5fb4",
         "type": "inject",
-        "z": "fc714a7ef7d3c130",
+        "z": "85e21fcb925ef32f",
         "name": "pm2Name",
         "props": [
             {
@@ -1244,17 +1026,17 @@
         "payload": "PM2NAME",
         "payloadType": "env",
         "x": 130,
-        "y": 900,
+        "y": 1120,
         "wires": [
             [
-                "613c8f87295fc26b"
+                "6af76a294daa96eb"
             ]
         ]
     },
     {
-        "id": "5a4c5866bec23443",
+        "id": "985cd59b3e414efe",
         "type": "function",
-        "z": "fc714a7ef7d3c130",
+        "z": "85e21fcb925ef32f",
         "name": "Get pm2Name",
         "func": "msg.payload = global.get(\"pm2Name\");\nreturn msg;",
         "outputs": 1,
@@ -1263,17 +1045,17 @@
         "finalize": "",
         "libs": [],
         "x": 520,
-        "y": 1460,
+        "y": 1240,
         "wires": [
             [
-                "763e993c4a211e18"
+                "c0939e4a.6386f"
             ]
         ]
     },
     {
-        "id": "d103af9f4fac07c9",
+        "id": "fd6a29d4dda908dd",
         "type": "inject",
-        "z": "fc714a7ef7d3c130",
+        "z": "85e21fcb925ef32f",
         "name": "Archive now",
         "props": [
             {
@@ -1294,16 +1076,16 @@
         "y": 840,
         "wires": [
             [
-                "fe5d584150d52a78"
+                "76d6712bed883108"
             ]
         ]
     },
     {
-        "id": "fe5d584150d52a78",
+        "id": "76d6712bed883108",
         "type": "function",
-        "z": "fc714a7ef7d3c130",
+        "z": "85e21fcb925ef32f",
         "name": "Single Archive Pulse",
-        "func": "var device = global.get('device');\ndevice.archiveNow = 1;\nreturn {topic:'archivePulse', payload:true};",
+        "func": "return {topic:'archivePulse', payload:true};",
         "outputs": 1,
         "noerr": 0,
         "initialize": "// Code added here will be run once\n// whenever the node is started.\ncontext.set('lastArchive', new Date().getTime());",
@@ -1313,428 +1095,14 @@
         "y": 840,
         "wires": [
             [
-                "34c3c3d0e79bb93a"
+                "d74e019a27b1a659"
             ]
         ]
     },
     {
-        "id": "5f6b6cb73aff0b66",
-        "type": "mqtt in",
-        "z": "fc714a7ef7d3c130",
-        "name": "Subscribe DeviceA",
-        "topic": "$(MQTTDEVICEA)",
-        "qos": "0",
-        "datatype": "auto",
-        "broker": "79250bf3.365cc4",
-        "nl": false,
-        "rap": false,
-        "inputs": 0,
-        "x": 130,
-        "y": 160,
-        "wires": [
-            [
-                "4a32d6bc7f2733ad"
-            ]
-        ]
-    },
-    {
-        "id": "4df443a2b491160c",
-        "type": "mqtt out",
-        "z": "fc714a7ef7d3c130",
-        "name": "Publish Readings",
-        "topic": "",
-        "qos": "0",
-        "retain": "false",
-        "broker": "79250bf3.365cc4",
-        "x": 1410,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "c9c722810201ae01",
-        "type": "function",
-        "z": "fc714a7ef7d3c130",
-        "name": "Build Canvas",
-        "func": "var device = global.get('device');\ndevice.settingInProgress = 1;\nvar x32Array = [];\nvar x1Array = [];\nfor (var ii = 0; ii < 256; ++ii) \n{\n    x32Array[ii] = 0;\n    x1Array[ii]  = 0;\n}\nvar gainShift = 0;\nif (device.gain1.value > 0) gainShift = Math.ceil(device.gain1.value / 6.020599914);\nvar gainMult = 1;\nfor (ii = 0; ii < gainShift; ++ii) gainMult = gainMult * 2;\ngainMult = Math.exp(0.115129255 * device.gain1.value) / gainMult;\nif (gainMult >  1) gainMult =  1;\n\nx32Array[0] = Math.round(gainMult * 2147483647);\nif (x32Array[0] <  0)          x32Array[0] =  0;\nif (x32Array[0] >  2147483647) x32Array[0] =  2147483647;\n\nif (gainShift > 31) gainShift = 31;\nx32Array[5] = gainShift;\n\ngainShift = 0;\nif (device.gain2.value > 0) gainShift = Math.ceil(device.gain2.value / 6.020599914);\ngainMult = 1;\nfor (ii = 0; ii < gainShift; ++ii) gainMult = gainMult * 2;\ngainMult = Math.exp(0.115129255 * device.gain2.value) / gainMult;\nif (gainMult >  1) gainMult =  1;\n\nx32Array[8] = Math.round(gainMult * 2147483647);\nif (x32Array[8] <  0)          x32Array[8] =  0;\nif (x32Array[8] >  2147483647) x32Array[8] =  2147483647;\n\nif (gainShift > 31) gainShift = 31;\nx32Array[9] = gainShift;\n\nif (device.phaseShift.value < -180) device.gainMult.value = -180;\nif (device.phaseShift.value >  180) device.gainMult.value =  180;\nx32Array[1] = Math.round(Math.cos(device.phaseShift.value * Math.PI / 180.0) * 2147483647);\nx32Array[2] = Math.round(Math.sin(device.phaseShift.value * Math.PI / 180.0) * 2147483647);\nif (x32Array[1] < -2147483647) x32Array[1] = -2147483647;\nif (x32Array[1] >  2147483647) x32Array[1] =  2147483647;\nif (x32Array[2] < -2147483647) x32Array[2] = -2147483647;\nif (x32Array[2] >  2147483647) x32Array[2] =  2147483647;\n\nif (device.lowPassFilterShift.value < 1)  device.lowPassFilterShift.value = 1;\nif (device.lowPassFilterShift.value > 31) device.lowPassFilterShift.value = 31;\nx32Array[3] = Math.round(device.lowPassFilterShift.value);\nif (x32Array[3] < 1)  x32Array[3] = 1;\nif (x32Array[3] > 31) x32Array[3] = 31;\n\nif (device.derivativeStep.value < 1)   device.derivativeStep.value = 1;\nif (device.derivativeStep.value > 255) device.derivativeStep.value = 255;\nx32Array[4] = Math.round(device.derivativeStep.value);\nif (x32Array[4] < 1)   x32Array[4] = 1;\nif (x32Array[4] > 255) x32Array[4] = 255;\n\nif (device.limiterWindow1.value <  0)   device.limiterWindow1.value =  -device.limiterWindow1.value;\nif (device.limiterWindow1.value >  100) device.limiterWindow1.value =  100;\nx32Array[6] = Math.round(0.01 * device.limiterWindow1.value * 2147483647);\nif (x32Array[6] <  0)          x32Array[6] =  0;\nif (x32Array[6] >  2147483647) x32Array[6] =  2147483647;\nx32Array[7] = -x32Array[6];\n\nif (device.limiterWindow2.value <  0)   device.limiterWindow2.value =  -device.limiterWindow2.value;\nif (device.limiterWindow2.value >  100) device.limiterWindow2.value =  100;\nx32Array[10] = Math.round(0.01 * device.limiterWindow2.value * 2147483647);\nif (x32Array[10] <  0)          x32Array[10] =  0;\nif (x32Array[10] >  2147483647) x32Array[10] =  2147483647;\nx32Array[11] = -x32Array[10];\n\nif (device.systemOn.value != 0) device.systemOn.value = 1;\nx1Array[0] = 0;\nif (device.systemOn.value == 0) x1Array[0] = 1;\n\nif (device.highLevelOn1.value != 0) device.highLevelOn1.value = 1;\nx1Array[1] = 0;\nif (device.highLevelOn1.value == 0) x1Array[1] = 1;\n\nif (device.highLevelOn2.value != 0) device.highLevelOn2.value = 1;\nx1Array[2] = 0;\nif (device.highLevelOn2.value == 0) x1Array[2] = 1;\n\ndevice.lpfFreq.value = 1;\nfor (ii = 0; ii < device.lowPassFilterShift.value; ++ii) device.lpfFreq.value = device.lpfFreq.value * 2;\ndevice.lpfFreq.value = Math.round(125000000 / (device.lpfFreq.value * 8)) / 1000;\n\ndevice.notchFreq.value = Math.round(125000000 / (32 * device.derivativeStep.value)) / 1000;\nvar x32String = '';\nvar x1String = '';\n\nfor (var ii = 0; ii < 256; ++ii) \n{\n    x32String = x32String + ii.toString() + '   ' + x32Array[ii].toString() + '\\n';\n    x1String  = x1String + ii.toString()  + '   ' + x1Array[ii].toString() + '\\n';\n}\n\nreturn {topic: 'canvasData', payload:[{topic:'x32',payload:x32String,filename:'Canvas/x32Const.txt'}, {topic:'x1',payload:x1String,filename:'Canvas/x1Const.txt'}]};\n\n//INSTANCE NAME ORIGINAL           INSTANCE NAME PARSED\n//-----------------------------------------------------\n//clr ---------------------------> x1_const_0\n//HiLvlOff1 ---------------------> x1_const_1\n//HiLvlOff2 ---------------------> x1_const_2\n//gainMult1 ---------------------> x32_const_0\n//Imult -------------------------> x32_const_1\n//Qmult -------------------------> x32_const_2\n//lowPassFilterShift ------------> x32_const_3\n//delayCnt ----------------------> x32_const_4\n//gainShift1 --------------------> x32_const_5\n//UpLevel1 ----------------------> x32_const_6\n//LowLevel1 ---------------------> x32_const_7\n//gainMult2 ---------------------> x32_const_8\n//gainShift2 --------------------> x32_const_9\n//UpLevel2 ----------------------> x32_const_10\n//LowLevel2 ---------------------> x32_const_11\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 170,
-        "y": 660,
-        "wires": [
-            [
-                "cde9cf5a56126140"
-            ]
-        ]
-    },
-    {
-        "id": "31e7ce1095d11005",
-        "type": "file",
-        "z": "fc714a7ef7d3c130",
-        "name": "Write Canvas",
-        "filename": "",
-        "appendNewline": false,
-        "createDir": false,
-        "overwriteFile": "true",
-        "encoding": "none",
-        "x": 820,
-        "y": 660,
-        "wires": [
-            [
-                "25171ce7fee9e7a9"
-            ]
-        ]
-    },
-    {
-        "id": "cde9cf5a56126140",
-        "type": "split",
-        "z": "fc714a7ef7d3c130",
-        "name": "Split x1, x2",
-        "splt": "\\n",
-        "spltType": "str",
-        "arraySplt": 1,
-        "arraySpltType": "len",
-        "stream": false,
-        "addname": "",
-        "x": 330,
-        "y": 660,
-        "wires": [
-            [
-                "54e547fc6f1de3e3"
-            ]
-        ]
-    },
-    {
-        "id": "54e547fc6f1de3e3",
-        "type": "function",
-        "z": "fc714a7ef7d3c130",
-        "name": "Shift payload",
-        "func": "return msg.payload;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 490,
-        "y": 660,
-        "wires": [
-            [
-                "f02f2366b9985cfd"
-            ]
-        ]
-    },
-    {
-        "id": "f02f2366b9985cfd",
-        "type": "delay",
-        "z": "fc714a7ef7d3c130",
-        "name": "",
-        "pauseType": "rate",
-        "timeout": "5",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "0.5",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 650,
-        "y": 660,
-        "wires": [
-            [
-                "31e7ce1095d11005"
-            ]
-        ]
-    },
-    {
-        "id": "25171ce7fee9e7a9",
-        "type": "switch",
-        "z": "fc714a7ef7d3c130",
-        "name": "Wait for x1",
-        "property": "topic",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "x1",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 990,
-        "y": 660,
-        "wires": [
-            [
-                "abc8e5305df13c09"
-            ]
-        ]
-    },
-    {
-        "id": "abc8e5305df13c09",
-        "type": "exec",
-        "z": "fc714a7ef7d3c130",
-        "command": "sudo ./canvas.sh",
-        "addpay": "",
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "winHide": false,
-        "oldrc": false,
-        "name": "Write memory map",
-        "x": 1170,
-        "y": 660,
-        "wires": [
-            [
-                "595cdde12112c2c3"
-            ],
-            [],
-            []
-        ]
-    },
-    {
-        "id": "4d954311b75f11d2",
-        "type": "link in",
-        "z": "fc714a7ef7d3c130",
-        "name": "Canvas Settings In",
-        "links": [
-            "5502095eee47e779",
-            "053889cc4e7fe020"
-        ],
-        "x": 55,
-        "y": 660,
-        "wires": [
-            [
-                "c9c722810201ae01"
-            ]
-        ]
-    },
-    {
-        "id": "4bab782ef6b8962f",
-        "type": "link out",
-        "z": "fc714a7ef7d3c130",
-        "name": "",
-        "mode": "link",
-        "links": [
-            "646fa4e3e8a44ef2",
-            "fc83bd0b358f2c44"
-        ],
-        "x": 1455,
-        "y": 660,
-        "wires": []
-    },
-    {
-        "id": "595cdde12112c2c3",
-        "type": "function",
-        "z": "fc714a7ef7d3c130",
-        "name": "Test success",
-        "func": "device = global.get('device');\ndevice.settingInProgress = 0;\nsettingSuccess = false;\nif (msg.rc.code == 0) settingSuccess = true;\nreturn {topic:\"settingSuccess\",payload:settingSuccess};",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1350,
-        "y": 660,
-        "wires": [
-            [
-                "4bab782ef6b8962f"
-            ]
-        ]
-    },
-    {
-        "id": "5502095eee47e779",
-        "type": "link out",
-        "z": "fc714a7ef7d3c130",
-        "name": "init tray out",
-        "mode": "link",
-        "links": [
-            "4d954311b75f11d2"
-        ],
-        "x": 1015,
-        "y": 60,
-        "wires": []
-    },
-    {
-        "id": "6e3c2a40692c9615",
-        "type": "function",
-        "z": "fc714a7ef7d3c130",
-        "name": "Create Setting",
-        "func": "var device = global.get('device');\ndevice[msg.payload.attr].value = msg.payload.value;\ndevice.settingInProgress = 1;\nreturn {topic:'settingInProgress', payload:true};\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 180,
-        "y": 380,
-        "wires": [
-            [
-                "053889cc4e7fe020",
-                "5205ea3ffe7e0431"
-            ]
-        ]
-    },
-    {
-        "id": "14c7747178216dd0",
-        "type": "http in",
-        "z": "b8a9252872fb4fd5",
-        "name": "/apps",
-        "url": "/apps",
-        "method": "get",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 70,
-        "y": 260,
-        "wires": [
-            [
-                "bec2356f397fe6e7"
-            ]
-        ]
-    },
-    {
-        "id": "bfabb79c9180cb91",
-        "type": "template",
-        "z": "b8a9252872fb4fd5",
-        "name": "Body",
-        "field": "payload.body",
-        "fieldType": "msg",
-        "format": "html",
-        "syntax": "mustache",
-        "template": "<!-- Body HTML -->\n    <div class='container' width=\"100%\">\n        <div class='row vert-pad' >\n            <div class='col-md-12'>\n                <a class=\"btn jumbotron-button btn-block big-text bold-text\" width='80%' href=\"/blinky-rpmode0-dsp?name={{{payload.deviceAName}}}\" >\n                    <table width=\"100%\" alight=\"left\">\n                        <tr>\n                            <td width=\"30%\" align='center'> <img src=\"/img/basicYellow.png\" height=\"70px\"/></td>\n                            <td width=\"70%\" align=\"left\">RP-Mode0 DSP {{{payload.deviceAName}}}</td>\n                        </tr>\n                    </table>\n                </a>\n            </div>\n        </div>\n    </div>",
-        "output": "str",
-        "x": 810,
-        "y": 260,
-        "wires": [
-            [
-                "6720330d9e544805"
-            ]
-        ]
-    },
-    {
-        "id": "83c8bcf70eb9e2e3",
-        "type": "template",
-        "z": "b8a9252872fb4fd5",
-        "name": "Title",
-        "field": "payload.title",
-        "fieldType": "msg",
-        "format": "html",
-        "syntax": "mustache",
-        "template": "RP-Mode0-DSP",
-        "output": "str",
-        "x": 530,
-        "y": 260,
-        "wires": [
-            [
-                "48f2d7d7920f5ca7"
-            ]
-        ]
-    },
-    {
-        "id": "164f22e586fe1182",
-        "type": "template",
-        "z": "b8a9252872fb4fd5",
-        "name": "JavaScript",
-        "field": "payload.javascript",
-        "fieldType": "msg",
-        "format": "javascript",
-        "syntax": "mustache",
-        "template": "        useWebSockets(false);\n        function onDocumentReady()\n        {\n        }\n        function onWebSocketOpen()\n        {\n        }\n        function onWebSocketClose()\n        {\n            \n        }\n        function onWebSocketMessage(msg)\n        {\n        }\n\n",
-        "output": "str",
-        "x": 390,
-        "y": 260,
-        "wires": [
-            [
-                "83c8bcf70eb9e2e3"
-            ]
-        ]
-    },
-    {
-        "id": "48f2d7d7920f5ca7",
-        "type": "template",
-        "z": "b8a9252872fb4fd5",
-        "name": "navBarIcon",
-        "field": "payload.navBarIcon",
-        "fieldType": "msg",
-        "format": "html",
-        "syntax": "mustache",
-        "template": "basicYellow.png",
-        "output": "str",
-        "x": 670,
-        "y": 260,
-        "wires": [
-            [
-                "bfabb79c9180cb91"
-            ]
-        ]
-    },
-    {
-        "id": "5b0ae431e03fc264",
-        "type": "websocket in",
-        "z": "b8a9252872fb4fd5",
-        "name": "/blinky-rpmode0-dsp/websocket",
-        "server": "44b51478.9c022c",
-        "client": "",
-        "x": 150,
-        "y": 720,
-        "wires": [
-            [
-                "468560f300303ae4"
-            ]
-        ]
-    },
-    {
-        "id": "e78da0f27098db39",
-        "type": "websocket out",
-        "z": "b8a9252872fb4fd5",
-        "name": "/blinky-rpmode0-dsp/websocket",
-        "server": "44b51478.9c022c",
-        "client": "",
-        "x": 830,
-        "y": 720,
-        "wires": []
-    },
-    {
-        "id": "468560f300303ae4",
-        "type": "link out",
-        "z": "b8a9252872fb4fd5",
-        "name": "Web socket out",
-        "links": [
-            "2f289f87.fe2ff",
-            "c7f3b5bf.85c9a8",
-            "09c2e8c5be726aa1"
-        ],
-        "x": 315,
-        "y": 720,
-        "wires": []
-    },
-    {
-        "id": "9badb025c96f9f01",
-        "type": "link in",
-        "z": "b8a9252872fb4fd5",
-        "name": "Web socket in",
-        "links": [
-            "1cdcbcd8.9514e3",
-            "78ceea9e.d0b204",
-            "7ac9b7947c52a846"
-        ],
-        "x": 635,
-        "y": 720,
-        "wires": [
-            [
-                "e78da0f27098db39"
-            ]
-        ]
-    },
-    {
-        "id": "bb19d374447ac94d",
+        "id": "7c54db38ef42ea17",
         "type": "inject",
-        "z": "b8a9252872fb4fd5",
+        "z": "85e21fcb925ef32f",
         "name": "project",
         "props": [
             {
@@ -1752,18 +1120,18 @@
         "topic": "project",
         "payload": "PROJECT",
         "payloadType": "env",
-        "x": 460,
-        "y": 60,
+        "x": 100,
+        "y": 1400,
         "wires": [
             [
-                "07eeef646a544d5e"
+                "df7945d1e609440c"
             ]
         ]
     },
     {
-        "id": "07eeef646a544d5e",
+        "id": "df7945d1e609440c",
         "type": "function",
-        "z": "b8a9252872fb4fd5",
+        "z": "85e21fcb925ef32f",
         "name": "Save global env variables",
         "func": "global.set(msg.topic,msg.payload);\nreturn null;",
         "outputs": 0,
@@ -1771,108 +1139,365 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
+        "x": 290,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "501090a1fd5f88f5",
+        "type": "link out",
+        "z": "85e21fcb925ef32f",
+        "name": "Save config file out",
+        "links": [
+            "04d132d87ffeb91a"
+        ],
+        "x": 715,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "eec56d72bdbd1430",
+        "type": "delay",
+        "z": "85e21fcb925ef32f",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 680,
+        "y": 520,
+        "wires": [
+            [
+                "2cd296fd87868cea"
+            ]
+        ]
+    },
+    {
+        "id": "95bf73e1f0d68181",
+        "type": "delay",
+        "z": "85e21fcb925ef32f",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 340,
+        "y": 520,
+        "wires": [
+            [
+                "47de6287cc26419f"
+            ]
+        ]
+    },
+    {
+        "id": "b82f13a5e04e195a",
+        "type": "function",
+        "z": "85e21fcb925ef32f",
+        "name": "Pause Readings",
+        "func": "global.set('settingInProgress',true)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 180,
+        "y": 520,
+        "wires": [
+            [
+                "95bf73e1f0d68181"
+            ]
+        ]
+    },
+    {
+        "id": "45409b1230e854cd",
+        "type": "mqtt out",
+        "z": "85e21fcb925ef32f",
+        "name": "Publish Archive",
+        "topic": "",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "79250bf3.365cc4",
+        "x": 760,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "d74e019a27b1a659",
+        "type": "function",
+        "z": "85e21fcb925ef32f",
+        "name": "Publish tray",
+        "func": "if (!msg.payload) return null;\nvar tray = global.get('tray');\nvar newMsg = \n{\n    topic: global.get('trayProps').box + '/' + global.get('trayProps').type + '/' + global.get('trayProps').name + '/archive',\n    payload: JSON.stringify(tray)\n};\nreturn  newMsg;  \n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 780,
+        "wires": [
+            [
+                "45409b1230e854cd"
+            ]
+        ]
+    },
+    {
+        "id": "fcc98447c16c3949",
+        "type": "function",
+        "z": "85e21fcb925ef32f",
+        "name": "Create Setting",
+        "func": "var tray = global.get('tray');\ntray[msg.payload.cube].value = msg.payload.value;\nreturn {topic:'setting', payload:true};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 200,
+        "y": 380,
+        "wires": [
+            [
+                "93758a55568a2f76"
+            ]
+        ]
+    },
+    {
+        "id": "4396f560b43ac9f6",
+        "type": "function",
+        "z": "85e21fcb925ef32f",
+        "name": "Build Canvas",
+        "func": "var tray = global.get('tray');\nglobal.set('settingInProgress', true);\n\nvar x32Array = [];\nvar x1Array = [];\nfor (var ii = 0; ii < 256; ++ii) \n{\n    x32Array[ii] = 0;\n    x1Array[ii]  = 0;\n}\nvar gainShift = 0;\nif (tray.gain1.value > 0) gainShift = Math.ceil(tray.gain1.value / 6.020599914);\nvar gainMult = 1;\nfor (ii = 0; ii < gainShift; ++ii) gainMult = gainMult * 2;\ngainMult = Math.exp(0.115129255 * tray.gain1.value) / gainMult;\nif (gainMult >  1) gainMult =  1;\n\nx32Array[0] = Math.round(gainMult * 2147483647);\nif (x32Array[0] <  0)          x32Array[0] =  0;\nif (x32Array[0] >  2147483647) x32Array[0] =  2147483647;\n\nif (gainShift > 31) gainShift = 31;\nx32Array[5] = gainShift;\n\ngainShift = 0;\nif (tray.gain2.value > 0) gainShift = Math.ceil(tray.gain2.value / 6.020599914);\ngainMult = 1;\nfor (ii = 0; ii < gainShift; ++ii) gainMult = gainMult * 2;\ngainMult = Math.exp(0.115129255 * tray.gain2.value) / gainMult;\nif (gainMult >  1) gainMult =  1;\n\nx32Array[8] = Math.round(gainMult * 2147483647);\nif (x32Array[8] <  0)          x32Array[8] =  0;\nif (x32Array[8] >  2147483647) x32Array[8] =  2147483647;\n\nif (gainShift > 31) gainShift = 31;\nx32Array[9] = gainShift;\n\nif (tray.phaseShift.value < -180) tray.gainMult.value = -180;\nif (tray.phaseShift.value >  180) tray.gainMult.value =  180;\nx32Array[1] = Math.round(Math.cos(tray.phaseShift.value * Math.PI / 180.0) * 2147483647);\nx32Array[2] = Math.round(Math.sin(tray.phaseShift.value * Math.PI / 180.0) * 2147483647);\nif (x32Array[1] < -2147483647) x32Array[1] = -2147483647;\nif (x32Array[1] >  2147483647) x32Array[1] =  2147483647;\nif (x32Array[2] < -2147483647) x32Array[2] = -2147483647;\nif (x32Array[2] >  2147483647) x32Array[2] =  2147483647;\n\nif (tray.lowPassFilterShift.value < 1)  tray.lowPassFilterShift.value = 1;\nif (tray.lowPassFilterShift.value > 31) tray.lowPassFilterShift.value = 31;\nx32Array[3] = Math.round(tray.lowPassFilterShift.value);\nif (x32Array[3] < 1)  x32Array[3] = 1;\nif (x32Array[3] > 31) x32Array[3] = 31;\n\nif (tray.derivativeStep.value < 1)   tray.derivativeStep.value = 1;\nif (tray.derivativeStep.value > 255) tray.derivativeStep.value = 255;\nx32Array[4] = Math.round(tray.derivativeStep.value);\nif (x32Array[4] < 1)   x32Array[4] = 1;\nif (x32Array[4] > 255) x32Array[4] = 255;\n\nif (tray.limiterWindow1.value <  0)   tray.limiterWindow1.value =  -tray.limiterWindow1.value;\nif (tray.limiterWindow1.value >  100) tray.limiterWindow1.value =  100;\nx32Array[6] = Math.round(0.01 * tray.limiterWindow1.value * 2147483647);\nif (x32Array[6] <  0)          x32Array[6] =  0;\nif (x32Array[6] >  2147483647) x32Array[6] =  2147483647;\nx32Array[7] = -x32Array[6];\n\nif (tray.limiterWindow2.value <  0)   tray.limiterWindow2.value =  -tray.limiterWindow2.value;\nif (tray.limiterWindow2.value >  100) tray.limiterWindow2.value =  100;\nx32Array[10] = Math.round(0.01 * tray.limiterWindow2.value * 2147483647);\nif (x32Array[10] <  0)          x32Array[10] =  0;\nif (x32Array[10] >  2147483647) x32Array[10] =  2147483647;\nx32Array[11] = -x32Array[10];\n\nif (tray.systemOn.value != 0) tray.systemOn.value = 1;\nx1Array[0] = 0;\nif (tray.systemOn.value == 0) x1Array[0] = 1;\n\nif (tray.highLevelOn1.value != 0) tray.highLevelOn1.value = 1;\nx1Array[1] = 0;\nif (tray.highLevelOn1.value == 0) x1Array[1] = 1;\n\nif (tray.highLevelOn2.value != 0) tray.highLevelOn2.value = 1;\nx1Array[2] = 0;\nif (tray.highLevelOn2.value == 0) x1Array[2] = 1;\n\ntray.lpfFreq.value = 1;\nfor (ii = 0; ii < tray.lowPassFilterShift.value; ++ii) tray.lpfFreq.value = tray.lpfFreq.value * 2;\ntray.lpfFreq.value = Math.round(125000000 / (tray.lpfFreq.value * 8)) / 1000;\n\ntray.notchFreq.value = Math.round(125000000 / (32 * tray.derivativeStep.value)) / 1000;\nvar x32String = '';\nvar x1String = '';\n\nfor (var ii = 0; ii < 256; ++ii) \n{\n    x32String = x32String + ii.toString() + '   ' + x32Array[ii].toString() + '\\n';\n    x1String  = x1String + ii.toString()  + '   ' + x1Array[ii].toString() + '\\n';\n}\n\nreturn {topic: 'canvasData', payload:[{topic:'x32',payload:x32String,filename:'Canvas/x32Const.txt'}, {topic:'x1',payload:x1String,filename:'Canvas/x1Const.txt'}]};\n\n//INSTANCE NAME ORIGINAL           INSTANCE NAME PARSED\n//-----------------------------------------------------\n//clr ---------------------------> x1_const_0\n//HiLvlOff1 ---------------------> x1_const_1\n//HiLvlOff2 ---------------------> x1_const_2\n//gainMult1 ---------------------> x32_const_0\n//Imult -------------------------> x32_const_1\n//Qmult -------------------------> x32_const_2\n//lowPassFilterShift ------------> x32_const_3\n//delayCnt ----------------------> x32_const_4\n//gainShift1 --------------------> x32_const_5\n//UpLevel1 ----------------------> x32_const_6\n//LowLevel1 ---------------------> x32_const_7\n//gainMult2 ---------------------> x32_const_8\n//gainShift2 --------------------> x32_const_9\n//UpLevel2 ----------------------> x32_const_10\n//LowLevel2 ---------------------> x32_const_11\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 170,
+        "y": 660,
+        "wires": [
+            [
+                "944b83ba71721568"
+            ]
+        ]
+    },
+    {
+        "id": "841ad6963e742ba3",
+        "type": "file",
+        "z": "85e21fcb925ef32f",
+        "name": "Write Canvas",
+        "filename": "",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 820,
+        "y": 660,
+        "wires": [
+            [
+                "0b4d24dee726c65e"
+            ]
+        ]
+    },
+    {
+        "id": "944b83ba71721568",
+        "type": "split",
+        "z": "85e21fcb925ef32f",
+        "name": "Split x1, x2",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 330,
+        "y": 660,
+        "wires": [
+            [
+                "34ae80ed88ed3418"
+            ]
+        ]
+    },
+    {
+        "id": "34ae80ed88ed3418",
+        "type": "function",
+        "z": "85e21fcb925ef32f",
+        "name": "Shift payload",
+        "func": "return msg.payload;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 660,
+        "wires": [
+            [
+                "76a5dda9cc7716b5"
+            ]
+        ]
+    },
+    {
+        "id": "76a5dda9cc7716b5",
+        "type": "delay",
+        "z": "85e21fcb925ef32f",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "0.5",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
         "x": 650,
+        "y": 660,
+        "wires": [
+            [
+                "841ad6963e742ba3"
+            ]
+        ]
+    },
+    {
+        "id": "0b4d24dee726c65e",
+        "type": "switch",
+        "z": "85e21fcb925ef32f",
+        "name": "Wait for x1",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "x1",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 990,
+        "y": 660,
+        "wires": [
+            [
+                "023a034abe547f7a"
+            ]
+        ]
+    },
+    {
+        "id": "023a034abe547f7a",
+        "type": "exec",
+        "z": "85e21fcb925ef32f",
+        "command": "sudo ./canvas.sh",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Write memory map",
+        "x": 1170,
+        "y": 660,
+        "wires": [
+            [
+                "340ca6cd6d6229e4"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "e9a01e5bc2f140ef",
+        "type": "link in",
+        "z": "85e21fcb925ef32f",
+        "name": "Canvas Settings In",
+        "links": [
+            "756ba0a6f071c881",
+            "56eb9898c37a8173",
+            "b018aa03d43d5655",
+            "93758a55568a2f76"
+        ],
+        "x": 55,
+        "y": 660,
+        "wires": [
+            [
+                "4396f560b43ac9f6"
+            ]
+        ]
+    },
+    {
+        "id": "dc7936fb55cf6c52",
+        "type": "link out",
+        "z": "85e21fcb925ef32f",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "31827f194c96f5b4",
+            "71ae4116685dc414",
+            "45a97566b65c65cc"
+        ],
+        "x": 1455,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "340ca6cd6d6229e4",
+        "type": "function",
+        "z": "85e21fcb925ef32f",
+        "name": "Test success",
+        "func": "global.set('settingInProgress', false);\nsettingSuccess = false;\nif (msg.rc.code == 0) settingSuccess = true;\nreturn {topic:\"settingSuccess\",payload:settingSuccess};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1350,
+        "y": 660,
+        "wires": [
+            [
+                "dc7936fb55cf6c52"
+            ]
+        ]
+    },
+    {
+        "id": "b018aa03d43d5655",
+        "type": "link out",
+        "z": "85e21fcb925ef32f",
+        "name": "Init tray",
+        "mode": "link",
+        "links": [
+            "e9a01e5bc2f140ef"
+        ],
+        "x": 1135,
         "y": 60,
         "wires": []
     },
     {
-        "id": "85bbbc94c80b9edc",
-        "type": "http in",
-        "z": "b8a9252872fb4fd5",
-        "name": "/",
-        "url": "/",
-        "method": "get",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 70,
-        "y": 200,
-        "wires": [
-            [
-                "b022f943a8a4dd75"
-            ]
-        ]
-    },
-    {
-        "id": "2cde678fb7cce2c6",
-        "type": "template",
-        "z": "b8a9252872fb4fd5",
-        "name": "Body",
-        "field": "payload.body",
-        "fieldType": "msg",
-        "format": "html",
-        "syntax": "mustache",
-        "template": "<!-- Body HTML -->\n",
-        "output": "str",
-        "x": 810,
-        "y": 200,
-        "wires": [
-            [
-                "442b832cdc12d085"
-            ]
-        ]
-    },
-    {
-        "id": "8d2b6318b1568ccd",
-        "type": "template",
-        "z": "b8a9252872fb4fd5",
-        "name": "Title",
-        "field": "payload.title",
-        "fieldType": "msg",
-        "format": "html",
-        "syntax": "mustache",
-        "template": "RP-Mode0-DSP",
-        "output": "str",
-        "x": 530,
-        "y": 200,
-        "wires": [
-            [
-                "4c5f7bd582c219f9"
-            ]
-        ]
-    },
-    {
-        "id": "b022f943a8a4dd75",
-        "type": "template",
-        "z": "b8a9252872fb4fd5",
-        "name": "JavaScript",
-        "field": "payload.javascript",
-        "fieldType": "msg",
-        "format": "javascript",
-        "syntax": "mustache",
-        "template": "        useWebSockets(false);\n        function onDocumentReady()\n        {\n            window.location = '/apps'\n        }\n        function onWebSocketOpen()\n        {\n        }\n        function onWebSocketClose()\n        {\n            \n        }\n        function onWebSocketMessage(msg)\n        {\n        }\n\n",
-        "output": "str",
-        "x": 390,
-        "y": 200,
-        "wires": [
-            [
-                "8d2b6318b1568ccd"
-            ]
-        ]
-    },
-    {
-        "id": "4c5f7bd582c219f9",
-        "type": "template",
-        "z": "b8a9252872fb4fd5",
-        "name": "navBarIcon",
-        "field": "payload.navBarIcon",
-        "fieldType": "msg",
-        "format": "html",
-        "syntax": "mustache",
-        "template": "basicYellow.png",
-        "output": "str",
-        "x": 670,
-        "y": 200,
-        "wires": [
-            [
-                "2cde678fb7cce2c6"
-            ]
-        ]
-    },
-    {
-        "id": "975d7b647972ced9",
+        "id": "a5ba61bf663ce32e",
         "type": "inject",
-        "z": "b8a9252872fb4fd5",
-        "name": "deviceA",
+        "z": "85e21fcb925ef32f",
+        "name": "",
         "props": [
             {
                 "p": "payload"
@@ -1882,360 +1507,37 @@
                 "vt": "str"
             }
         ],
-        "repeat": "",
+        "repeat": "4",
         "crontab": "",
         "once": true,
-        "onceDelay": "1",
-        "topic": "deviceA",
-        "payload": "MQTTDEVICEA",
-        "payloadType": "env",
-        "x": 100,
-        "y": 60,
-        "wires": [
-            [
-                "4b5eca3e3b7efc22"
-            ]
-        ]
-    },
-    {
-        "id": "4b5eca3e3b7efc22",
-        "type": "function",
-        "z": "b8a9252872fb4fd5",
-        "name": "Init device name",
-        "func": "var mqttSplit = msg.payload.split('/');\nvar deviceProps = {\n    project     :   mqttSplit[0],\n    deviceType  :   mqttSplit[1],\n    name        :   mqttSplit[2],\n};\nflow.set(msg.topic + 'Props',deviceProps);\nreturn null;",
-        "outputs": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 260,
-        "y": 60,
-        "wires": []
-    },
-    {
-        "id": "bec2356f397fe6e7",
-        "type": "function",
-        "z": "b8a9252872fb4fd5",
-        "name": "Device Names",
-        "func": "msg.payload['deviceAName'] = flow.get('deviceAProps').name;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 220,
+        "onceDelay": "10",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1030,
         "y": 260,
         "wires": [
             [
-                "164f22e586fe1182"
+                "c4c80b41c4f5b19d"
             ]
         ]
     },
     {
-        "id": "442b832cdc12d085",
-        "type": "subflow:8341090a.df9758",
-        "z": "b8a9252872fb4fd5",
-        "name": "",
-        "x": 950,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "6720330d9e544805",
-        "type": "subflow:8341090a.df9758",
-        "z": "b8a9252872fb4fd5",
-        "name": "",
-        "x": 950,
-        "y": 260,
-        "wires": []
-    },
-    {
-        "id": "3a8abcf7f03a606c",
-        "type": "template",
-        "z": "b8a9252872fb4fd5",
-        "name": "numberAttrSetWidget",
-        "field": "payload.script.numberAttrSetWidget",
-        "fieldType": "msg",
-        "format": "javascript",
-        "syntax": "mustache",
-        "template": "        class NumberAttrSetWidget \n        {\n            constructor(deviceAttr, deviceLabel, labelWidth, inputWidth, buttonWidth)\n            {\n                this.labelWidth = labelWidth;\n                this.inputWidth = inputWidth;\n                this.buttonWidth = buttonWidth;\n                \n                this.deviceAttr = deviceAttr;\n                this.deviceLabel = deviceLabel;\n                this.changed = false;\n                this.project = null;\n                this.deviceType = null;\n                this.deviceName = null;\n            }\n            init(cardBodyContainer, deviceConfig)\n            {\n                this.project = deviceConfig.project;\n                this.deviceType = deviceConfig.deviceType;\n                this.deviceName = deviceConfig.name;\n\n                let settingRow  = document.createElement('div');\n                settingRow.setAttribute('class', 'row');\n\n                let labelSpan  = document.createElement('span');\n                labelSpan.setAttribute('class', 'card-text');\n                labelSpan.innerHTML = this.deviceLabel;\n\n                let labelColumn  = document.createElement('div');\n                labelColumn.setAttribute('class', 'col-md-' + this.labelWidth.toString());\n                labelColumn.setAttribute('align', 'left');\n                labelColumn.appendChild(labelSpan);\n                settingRow.appendChild(labelColumn);\n                \n                this.inputBox = document.createElement('input');\n                this.inputBox.setAttribute('class', 'big-text');\n                this.inputBox.setAttribute('type', 'text');\n                this.inputBox.setAttribute('value', '0');\n                this.inputBox.setAttribute('size', '8');\n                this.inputBox.oninput = event => {this.inputChange()};\n\n                let inputColumn  = document.createElement('div');\n                inputColumn.setAttribute('class', 'col-md-' + this.inputWidth.toString());\n                inputColumn.appendChild(this.inputBox);\n                settingRow.appendChild(inputColumn);\n\n                this.okButton = document.createElement('button');\n                this.okButton.setAttribute('class', 'btn btn-block card-button big-text');\n                this.okButton.innerHTML = '&#10003;';\n                this.okButton.onclick = event => {this.changeSetting()};\n                \n                let okButtonColumn  = document.createElement('div');\n                okButtonColumn.setAttribute('class', 'col-md-' + this.buttonWidth.toString());\n                okButtonColumn.appendChild(this.okButton);\n                settingRow.appendChild(okButtonColumn);\n                \n                cardBodyContainer.appendChild(settingRow);\n                this.showOkButton(false);\n                this.enableInput(false);\n            }\n\n            showOkButton(showButton)\n            {\n                if (showButton)\n                {\n                    this.okButton.style.display='block';\n                }\n                else\n                {\n                    this.okButton.style.display='none';\n                }\n            }\n            enableInput(enable)\n            { \n                this.inputBox.disabled = !enable;\n            }\n            inputChange()\n            {\n                this.changed = true;\n                this.showOkButton(true);\n            }\n            changeSetting()\n            {\n                this.showOkButton(false);\n                if (isNaN(this.inputBox.value))\n                {\n                    this.changed = false;\n                    return;\n                }\n                let payload = {'attr': this.deviceAttr, 'value':Number(this.inputBox.value)};\n                let actionMsg = \n                    {\n                        topic   : this.project + '/' +  this.deviceType + '/' +  this.deviceName + '/setting/setting',\n                        payload : payload\n                    };\n                sendActionMsg('setting','setting',actionMsg);\n                this.changed = false;\n            }\n            updateValue(device)\n            {\n                if (device.deviceType != this.deviceType) return;\n                if (device.name != this.deviceName) return;\n                \n                if (device.settingInProgress == 0)\n                {\n                    this.enableInput(true);\n                }\n                else\n                {\n                    this.enableInput(false);\n                }\n                if (!this.changed) this.inputBox.value = device[this.deviceAttr].value.toString();\n            }\n\n        }\n\n\n",
-        "output": "str",
-        "x": 680,
-        "y": 880,
-        "wires": [
-            [
-                "1f14954e7c434f95"
-            ]
-        ]
-    },
-    {
-        "id": "b4e08476d15dbf79",
-        "type": "http in",
-        "z": "b8a9252872fb4fd5",
-        "name": "/blinky-rpmode0-dsp",
-        "url": "/blinky-rpmode0-dsp",
-        "method": "get",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 130,
-        "y": 880,
-        "wires": [
-            [
-                "3acab4a89d6bad74"
-            ]
-        ]
-    },
-    {
-        "id": "3acab4a89d6bad74",
+        "id": "c4c80b41c4f5b19d",
         "type": "function",
-        "z": "b8a9252872fb4fd5",
-        "name": "Set Name And Device Type",
-        "func": "msg.payload['script'] = {};\nmsg.payload['script']['name'] = msg.payload.name\nmsg.payload['script']['deviceType'] = 'blinky-rpmode0-dsp';\nmsg.payload['script']['project'] = global.get('project');\nreturn msg;\n",
+        "z": "85e21fcb925ef32f",
+        "name": "Increment watchdog",
+        "func": "var tray = global.get('tray');\ntray.watchdog.value = tray.watchdog.value + 1;\nif ( tray.watchdog.value > 32760 ) tray.watchdog.value = 0;\nmsg.payload = true\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 380,
-        "y": 880,
+        "x": 1220,
+        "y": 260,
         "wires": [
             [
-                "1e700446a8ccdef8"
-            ]
-        ]
-    },
-    {
-        "id": "09eeb3e7db98e8f9",
-        "type": "template",
-        "z": "b8a9252872fb4fd5",
-        "name": "Set Title",
-        "field": "payload.title",
-        "fieldType": "msg",
-        "format": "html",
-        "syntax": "mustache",
-        "template": "RP-Mode0-DSP {{{payload.script.name}}}",
-        "output": "str",
-        "x": 320,
-        "y": 960,
-        "wires": [
-            [
-                "3a8abcf7f03a606c"
-            ]
-        ]
-    },
-    {
-        "id": "1f14954e7c434f95",
-        "type": "template",
-        "z": "b8a9252872fb4fd5",
-        "name": "script.global",
-        "field": "payload.script.global",
-        "fieldType": "msg",
-        "format": "javascript",
-        "syntax": "mustache",
-        "template": "// Global Javascript\n        useWebSockets(true);\n        var appDeviceInfo = \n        {\n            config:\n            {\n                deviceType  : '{{{payload.script.deviceType}}}',\n                name        : '{{{payload.script.name}}}',\n                project     : '{{{payload.script.project}}}'\n            },\n            device: null\n        };\n        var archiveRequestList = [];\n        var archiveList = [];\n        var archiveList = [];\n        var pingInterval = 2000;\n        var lastPing = 0;        \n        var readings = \n        [\n            {deviceAttr:\"notchFreq\", label:\"Notch Freq.    (kHz)\"},\n            {deviceAttr:\"lpfFreq\",   label:\"Low Pass Freq. (kHz)\"}\n        ];\n        let settings = \n        [\n            new NumberAttrSetWidget(\"systemOn\",             \"System On\",        7, 3, 2),\n            new NumberAttrSetWidget(\"highLevelOn1\",         \"Hi Lvl 1 On\",      7, 3, 2),\n            new NumberAttrSetWidget(\"highLevelOn2\",         \"Hi Lvl 2 On\",      7, 3, 2),\n            new NumberAttrSetWidget(\"gain1\",                \"Gain 1 (dB)\",      7, 3, 2),\n            new NumberAttrSetWidget(\"gain2\",                \"Gain 2 (dB)\",      7, 3, 2),\n            new NumberAttrSetWidget(\"limiterWindow1\",       \"Window 1 (%)\",     7, 3, 2),\n            new NumberAttrSetWidget(\"limiterWindow2\",       \"Window 2 (%)\",     7, 3, 2),\n            new NumberAttrSetWidget(\"phaseShift\",           \"Phase (deg)\",      7, 3, 2),\n            new NumberAttrSetWidget(\"derivativeStep\",       \"Delay Step\",       7, 3, 2),\n            new NumberAttrSetWidget(\"lowPassFilterShift\",   \"Low Pass Step\",    7, 3, 2)\n        ];\n\n        function onDocumentReady()\n        {\n            let settingsCardBody = document.getElementById(\"settingsCardBody\");\n            for (let ii = 0; ii < settings.length; ++ii) settings[ii].init(settingsCardBody, appDeviceInfo.config);\n            createReadingsCard();\n            setRemoteApp(false);\n            if (remoteApp)\n            {\n                getCreds();\n                setInterval(function(){getCreds();}, 1000);\n            }\n            else\n            {\n                $('#userCardId').hide();\n            }\n            setInterval(ping, 1000);\n        }\n        function onWebSocketOpen()\n        {\n        }\n        function onWebSocketClose()\n        {\n            \n        }\n        function onWebSocketMessage(msg)\n        {\n            switch(msg.topic)\n            {\n                case 'readings':\n                    if ((msg.mqttDevice.name == appDeviceInfo.config.name) && (msg.mqttDevice.deviceType == appDeviceInfo.config.deviceType)  && (msg.mqttDevice.project == appDeviceInfo.config.project) )\n                    {\n                        lastPing = new Date().getTime();\n                        heartbeat();\n                        appDeviceInfo.device = JSON.parse(msg.payload);\n                        for (let ii = 0; ii < settings.length; ++ii) settings[ii].updateValue(appDeviceInfo.device);\n                        updateReadings(appDeviceInfo.device);\n                        viewTransferFunction(appDeviceInfo.device.notchFreq.value * 1000, appDeviceInfo.device.lpfFreq.value * 1000);\n                    }\n                    break;\n                case 'readDatabase':\n                    if (msg.userID == userID)\n                    {\n                        if ((msg.payload.device.deviceType == appDeviceInfo.config.deviceType) && (msg.payload.device.name == appDeviceInfo.config.name) )\n                            putArchiveValues(msg.payload);\n                    }\n                    break;\n                case 'renew':\n                    if (msg.userID == userID)\n                    {\n                        updateCookie(msg);\n                    }\n                    break;\n                case 'permissionError':\n                    if (msg.userID == userID)\n                    {\n                        acknowledgeDialog('Permission', 'Error', msg.payload);\n                    }\n                    break;\n                case 'loginExpired':\n                    if (msg.userID == userID)\n                    {\n                       location.reload();\n                    }\n                    break;\n                default:\n                    break;\n            }\n        }\n        function ping()\n        {\n            {\n                if (appDeviceInfo.device != null)\n                {\n                    if (appDeviceInfo.device.settingInProgress == 1) return;\n                }\n                var now = new Date().getTime();\n                if ((now - lastPing) > pingInterval)\n                {\n                    lastPing = now;\n                    var actionMsg = \n                        {\n                            topic   : appDeviceInfo.config.project + '/' +  appDeviceInfo.config.deviceType + '/' +  appDeviceInfo.config.name + '/setting/ping',\n                            payload : true\n                        };\n                    sendActionMsg('ping', 'ping', actionMsg);\n               }\n            }        \n        }\n        function reset(actionFlag)\n        {\n            var headerText = 'Warning';\n            var title = 'Resetting Tray';\n            var text = 'I hope you know what you are doing.';\n            var buttonTexts = ['Reset', 'Cancel'];\n            var buttonFunctions = \n            [\n                function()\n                {\n                    $( this ).dialog( \"close\" );\n                    var actionMsg = \n                        {\n                            topic   : appDeviceInfo.config.project + '/' +  appDeviceInfo.config.deviceType + '/' +  appDeviceInfo.config.name + '/setting/reset',\n                            payload : actionFlag\n                        };\n                    sendActionMsg('reset','setting',actionMsg);\n                 }, \n                function()\n                {\n                    $( this ).dialog( \"close\" );\n                }\n            ];\n            if (actionFlag == 2)\n            {\n                title = 'Rebooting Tray';\n                buttonTexts[0] = 'Reboot';\n            }\n            optionDialog(headerText, title, text, buttonTexts, buttonFunctions);\n            \n        }\n",
-        "output": "str",
-        "x": 650,
-        "y": 920,
-        "wires": [
-            [
-                "865a01f155f31651"
-            ]
-        ]
-    },
-    {
-        "id": "ec9f5cf5ef3c56c1",
-        "type": "template",
-        "z": "b8a9252872fb4fd5",
-        "name": "script.editDevice",
-        "field": "payload.script.editDevice",
-        "fieldType": "msg",
-        "format": "javascript",
-        "syntax": "mustache",
-        "template": "// Edit Device JavaScript\n       $( function() \n        {\n            $( \"#editDeviceDialog\" ).dialog(\n                {\n//                    closeOnEscape: false,\n//                    open: function(event, ui) {$(\".ui-dialog-titlebar-close\", ui.dialog | ui).hide();},\n                    width:    640,\n                    autoOpen: false,\n                    buttons:\n                    [\n                        {\n                            text: \"Set\",\n                            click: function() {setDeviceConfig(); $( this ).dialog( \"close\" );},\n                            showText: false\n                        },\n                        {\n                            text: \"Cancel\",\n                            click: function() \n                            {\n                                $( this ).dialog( \"close\" ); \n                            },\n                            showText: false\n                        }\n                    ]\n                });\n        } );\n        function editDevice(attrName)\n        {\n            $( \"#editDeviceDialog\" ).dialog( \"option\", \"title\", \"Edit\"); \n            editedAttribute = attrName;\n            $( \"#editDeviceDialogAttribute\").html(attrName);\n\n            var attr = appDeviceInfo.device[attrName];\n            $( \"#loloAlarm\").val(attr.alarm.limits.lolo);\n            $( \"#lowAlarm\").val(attr.alarm.limits.low);\n            $( \"#highAlarm\").val(attr.alarm.limits.high);\n            $( \"#hihiAlarm\").val(attr.alarm.limits.hihi);\n            $( \"#notifyName\").val(attr.alarm.notify.name);\n            $( \"#notifyNumber\").val(attr.alarm.notify.number);\n\n            $( \"#editDeviceDialog\" ).dialog( \"open\" );\n        }\n        function setDeviceConfig()\n        {\n            var attr = appDeviceInfo.device[editedAttribute];\n            if (isNaN($('#loloAlarm').val()) \n                || isNaN($('#lowAlarm').val()) \n                || isNaN($('#highAlarm').val()) \n                || isNaN($('#hihiAlarm').val()))\n            {\n                acknowledgeDialog('Error', 'Entry not a number!', editedAttribute);\n                editedAttribute = '';\n                return;\n            }\n            editedAttribute = '';\n\n            attr.alarm.limits.lolo = Number($( \"#loloAlarm\").val());\n            attr.alarm.limits.low = Number($( \"#lowAlarm\").val());\n            attr.alarm.limits.high = Number($( \"#highAlarm\").val());\n            attr.alarm.limits.hihi = Number($( \"#hihiAlarm\").val());\n            attr.alarm.notify.number =  $( \"#notifyNumber\").val();\n            attr.alarm.notify.name = $( \"#notifyName\").val();\n            var actionMsg = \n                {\n                    topic   : appDeviceInfo.config.project + '/' +  appDeviceInfo.config.deviceType + '/' +  appDeviceInfo.config.name + '/setting/config',\n                    payload : appDeviceInfo.device\n                };\n            sendActionMsg('config','setting',actionMsg);\n        }\n",
-        "output": "str",
-        "x": 660,
-        "y": 1040,
-        "wires": [
-            [
-                "05dce89dd62e9516"
-            ]
-        ]
-    },
-    {
-        "id": "29670eaef40128f0",
-        "type": "template",
-        "z": "b8a9252872fb4fd5",
-        "name": "javascript",
-        "field": "payload.javascript",
-        "fieldType": "msg",
-        "format": "javascript",
-        "syntax": "mustache",
-        "template": "// Custom Javascript\n{{{payload.script.numberAttrSetWidget}}}\n{{{payload.script.global}}}\n{{{payload.script.transferFunction}}}\n{{{payload.script.settingsReadings}}}\n{{{payload.script.editDevice}}}\n{{{payload.script.user}}}\n",
-        "output": "str",
-        "x": 640,
-        "y": 1120,
-        "wires": [
-            [
-                "fd05ec0a7d29b573"
-            ]
-        ]
-    },
-    {
-        "id": "80952ec14b2b26fb",
-        "type": "template",
-        "z": "b8a9252872fb4fd5",
-        "name": "body",
-        "field": "payload.body",
-        "fieldType": "msg",
-        "format": "html",
-        "syntax": "mustache",
-        "template": "<!-- body HTML -->\n    <div width=\"100%\">\n{{{payload.html.dashboard}}}\n{{{payload.html.control}}}\n{{{payload.html.timePlot}}}\n{{{payload.html.archive}}}\n{{{payload.html.user}}}\n{{{payload.html.wifimon}}}\n{{{payload.html.reset}}}\n    </div>",
-        "output": "str",
-        "x": 950,
-        "y": 1000,
-        "wires": [
-            [
-                "de09c957a3da801d"
-            ]
-        ]
-    },
-    {
-        "id": "1e700446a8ccdef8",
-        "type": "template",
-        "z": "b8a9252872fb4fd5",
-        "name": "navBarIcon",
-        "field": "payload.navBarIcon",
-        "fieldType": "msg",
-        "format": "html",
-        "syntax": "mustache",
-        "template": "basicYellow.png",
-        "output": "str",
-        "x": 330,
-        "y": 920,
-        "wires": [
-            [
-                "09eeb3e7db98e8f9"
-            ]
-        ]
-    },
-    {
-        "id": "f9f42b7c1047fb39",
-        "type": "template",
-        "z": "b8a9252872fb4fd5",
-        "name": "html.user",
-        "field": "payload.html.user",
-        "fieldType": "msg",
-        "format": "html",
-        "syntax": "mustache",
-        "template": "<!-- user HTML -->\n        <div class='row' style='padding-bottom: 25px;'>\n            <div class='col-md-12'>\n                <div class='card' id='userCardId'>\n                    <div class='card-body' align=\"center\">\n                        <table width=\"100%\">\n                            <tr>\n                                <td  align=\"left\">\n                                     <span class='card-text' style='color:black;'>User:</span>\n                                </td>\n                                <td  align=\"right\">\n                                     <span class='card-text' id='usernameId'></span>\n                                </td>\n                            </tr>\n                            <tr>\n                                <td  align=\"left\">\n                                    <span class='card-text' style='color:black;'>Time left:</span>\n                                </td>\n                                <td  align=\"right\">\n                                     <span class='card-text' id='expTimeId'></span>\n                                </td>\n                            </tr>\n                        </table>\n                        <table width=\"100%\">\n                            <tr>\n                                <td width=\"40%\">\n                                    <button class='btn btn-block card-button big-text' id='logoutButton' onclick=\"renew()\" >Renew</button>\n                                </td>\n                                <td width=\"10%\"></td>\n                                <td width=\"40%\">\n                                    <button class='btn btn-block card-button big-text' id='logoutButton' onclick=\"logout()\" >Logout</button>\n                                </td>\n                            </tr>\n                        </table>\n                    </div>\n                </div>\n            </div>\n        </div>\n",
-        "output": "str",
-        "x": 960,
-        "y": 920,
-        "wires": [
-            [
-                "95950b99cb540c85"
-            ]
-        ]
-    },
-    {
-        "id": "05dce89dd62e9516",
-        "type": "template",
-        "z": "b8a9252872fb4fd5",
-        "name": "script.user",
-        "field": "payload.script.user",
-        "fieldType": "msg",
-        "format": "javascript",
-        "syntax": "mustache",
-        "template": "// User Javascript\n        function getCreds()\n        {\n            var now = new Date().getTime();\n            var expDate = Number(getCookie('ExpDate'));\n            if (expDate > 0)\n            {\n                expDate = expDate - now;\n                if(expDate < 0)\n                {\n                    logout();\n                }\n                else\n                {\n                    var hours = Math.floor(expDate / 3600000);\n                    var minutes = expDate - hours * 3600000;\n                    minutes = Math.floor(minutes / 60000);\n                    var seconds = expDate - (hours * 3600000) - (minutes * 60000);\n                    seconds = Math.floor(seconds / 1000);\n                    hours = hours.toString();\n                    if (hours.length == 1) hours = '0' + hours; \n                    minutes = minutes.toString();\n                    if (minutes.length == 1) minutes = '0' + minutes; \n                    seconds = seconds.toString();\n                    if (seconds.length == 1) seconds = '0' + seconds; \n                    var timeString = hours + ':' + minutes + ':' + seconds;\n                    $('#usernameId').text(getCookie('Username'));\n                    $('#expTimeId').text(timeString);\n                }\n            }\n            else\n            {\n                $('#usernameId').text(getCookie('Username'));\n                $('#expTimeId').text('Forever');\n            }\n        }\n        function logout()\n        {\n            document.cookie = project + \"Role= ; expires = Thu, 01 Jan 1970 00:00:00 GMT\";\n            document.cookie = project + \"ExpDate= ; expires = Thu, 01 Jan 1970 00:00:00 GMT\";\n            document.cookie = project + \"Username= ; expires = Thu, 01 Jan 1970 00:00:00 GMT\";\n            window.location.href = \"/\";\n        }\n        function renew()\n        {\n            var actionMsg = {};\n            sendActionMsg('renew', 'renew', actionMsg);\n        }\n        function updateCookie(msg)\n        {\n            document.cookie = project + \"Role=\" + msg.role;\n            document.cookie = project + \"ExpDate=\" + msg.expDate;\n            document.cookie = project + \"Username=\" + msg.username;\n        }\n        function downloadToken()\n        {\n            downloadString(getCookie(\"Role\"), \"text/plain\", project + \"-token.txt\");\n        }\n// from https://gist.github.com/danallison/3ec9d5314788b337b682\n        function downloadString(text, fileType, fileName) \n        {\n            var blob = new Blob([text], { type: fileType });\n            \n            var a = document.createElement('a');\n            a.download = fileName;\n            a.href = URL.createObjectURL(blob);\n            a.dataset.downloadurl = [fileType, a.download, a.href].join(':');\n            a.style.display = \"none\";\n            document.body.appendChild(a);\n            a.click();\n            document.body.removeChild(a);\n            setTimeout(function() { URL.revokeObjectURL(a.href); }, 1500);\n        }",
-        "output": "str",
-        "x": 650,
-        "y": 1080,
-        "wires": [
-            [
-                "29670eaef40128f0"
-            ]
-        ]
-    },
-    {
-        "id": "95950b99cb540c85",
-        "type": "template",
-        "z": "b8a9252872fb4fd5",
-        "name": "html.reset",
-        "field": "payload.html.reset",
-        "fieldType": "msg",
-        "format": "html",
-        "syntax": "mustache",
-        "template": "<!-- reset HTML -->\n        <div class='row' style='padding-bottom: 25px;'>\n            <div class='col-md-12'>\n                <div class='card' id='reset'>\n                    <div class='card-body' align=\"center\">\n                         <table width=\"100%\">\n                            <tr>\n                                <td width=\"40%\">\n                                    <button class='btn btn-block card-button big-text' id='resetButton' onclick=\"reset(1)\" >Reset</button>\n                                </td>\n                                <td width=\"10%\"></td>\n                                <td width=\"40%\">\n                                    <button class='btn btn-block card-button big-text' id='rebootButton' onclick=\"reset(2)\" >Reboot</button>\n                                </td>\n                            </tr>\n                        </table>\n                    </div>\n                </div>\n            </div>\n        </div>\n",
-        "output": "str",
-        "x": 960,
-        "y": 960,
-        "wires": [
-            [
-                "80952ec14b2b26fb"
-            ]
-        ]
-    },
-    {
-        "id": "fd05ec0a7d29b573",
-        "type": "template",
-        "z": "b8a9252872fb4fd5",
-        "name": "html.dashboard",
-        "field": "payload.html.dashboard",
-        "fieldType": "msg",
-        "format": "html",
-        "syntax": "mustache",
-        "template": "<!-- Dashboard HTML -->\n        <div class='row' style='padding-bottom: 25px;'>\n            <div class='col-md-12' align='center'>\n                <div id='readingsCard' class='card'></div>\n            </div>\n        </div>\n        <div class='row' style='padding-bottom: 25px;'>\n            <div class='col-md-12' align='center'>\n                <div class='card'>\n                    <table width=\"100%\">\n                        <tr>\n                            <td width=\"15%\"></td>\n                            <td width=\"70%\">\n                                <span class='card-title' id='archiveCardTitleId'>Transfer Function</span>\n                            </td>\n                            <td width=\"15%\">\n                                 <button class='btn btn-block card-button' id=\"toggleTransferButtonId\" onclick=\"toggleTransferView()\" >Toggle View</button>\n                            </td>\n                        </tr>\n                    </table>\n                    <div class='card-body' align=\"center\">\n                        <div id=\"transferFunctionChart\" width=\"100%\" ></div>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class='row' style='padding-bottom: 25px;'>\n            <div class='col-md-12' align='center'>\n                <div class='card'>\n                    <p class='card-title' >Settings</p>\n                    <div id=\"settingsCardBody\" class='card-body' align=\"center\"></div>\n                </div>\n            </div>\n        </div>\n        <div class='row' style='padding-bottom: 25px;'>\n            <div class='col-md-12' align='center'>\n                <div id='settingsCard' class='card'></div>\n                <div id=\"editDeviceDialog\" title=\"Edit Device\" class='card'>\n                    <p class='card-title' id='editDeviceDialogAttribute'>Attribute</p>\n                    <div class='card-body'>\n                        <table>\n                            <tr>\n                                <td width=\"70%\" align=\"left\">  <span class=\"tableHeading tableText\">LoLo</span></td>\n                                <td width=\"30%\" align=\"right\"><input class=\"form-control tableText\" id=\"loloAlarm\" type=\"text\" value=\"0\" /></td>\n                            </tr>\n                            <tr>\n                                <td width=\"70%\" align=\"left\">  <span class=\"tableHeading tableText\">LOW</span></td>\n                                <td width=\"30%\" align=\"right\"><input class=\"form-control tableText\" id=\"lowAlarm\" type=\"text\" value=\"0\" /></td>\n                            </tr>\n                            <tr>\n                                <td width=\"70%\" align=\"left\">  <span class=\"tableHeading tableText\">HIGH</span></td>\n                                <td width=\"30%\" align=\"right\"><input class=\"form-control tableText\" id=\"highAlarm\" type=\"text\" value=\"0\" /></td>\n                            </tr>\n                            <tr>\n                                <td width=\"70%\" align=\"left\">  <span class=\"tableHeading tableText\">HiHi</span></td>\n                                <td width=\"30%\" align=\"right\"><input class=\"form-control tableText\" id=\"hihiAlarm\" type=\"text\" value=\"0\" /></td>\n                            </tr>\n                            <tr>\n                                <td width=\"70%\" align=\"left\">  <span class=\"tableHeading tableText\">Notify Name</span></td>\n                                <td width=\"30%\" align=\"right\"><input class=\"form-control tableText\" id=\"notifyName\" type=\"text\" value=\"\" /></td>\n                            </tr>\n                            <tr>\n                                <td width=\"70%\" align=\"left\">  <span class=\"tableHeading tableText\">Notify Number</span></td>\n                                <td width=\"30%\" align=\"right\"><input class=\"form-control tableText\" id=\"notifyNumber\" type=\"text\" value=\"\" /></td>\n                            </tr>\n                        </table>\n                    </div>\n                </div>\n            </div>\n        </div>\n",
-        "output": "str",
-        "x": 980,
-        "y": 880,
-        "wires": [
-            [
-                "f9f42b7c1047fb39"
-            ]
-        ]
-    },
-    {
-        "id": "5b652b6153978bc3",
-        "type": "template",
-        "z": "b8a9252872fb4fd5",
-        "name": "script.settingsReadings",
-        "field": "payload.script.settingsReadings",
-        "fieldType": "msg",
-        "format": "javascript",
-        "syntax": "mustache",
-        "template": "// Update Readings Javascript\n        function updateReadings(device)\n        {\n            if (device.settingInProgress == 0)\n            {\n                enableSettings(true);\n            }\n            else\n            {\n                enableSettings(false);\n            }\n            for (var ii = 0; ii < settings.length; ++ii)\n            {\n                if (!settings[ii].changed) $('#setting' + ii.toString() + 'InputId').val(device[settings[ii].deviceAttr].value.toString()); \n            }\n            for (var ii = 0; ii < readings.length; ++ii)\n            {\n                $('#reading' + ii.toString() + 'Id').text(device[readings[ii].deviceAttr].value.toString()); \n            }\n\n        }\n        function showSettingChangedButton(settingIndex, showButton)\n        {\n            if (showButton)\n            {\n                $('#setting' + settingIndex.toString() + 'ButtonId').show();\n            }\n            else\n            {\n                $('#setting' + settingIndex.toString() + 'ButtonId').hide();\n            }\n        }\n        function showEditDeviceButton(readingIndex, showButton)\n        {\n            if (showButton)\n            {\n                $('#reading' + readingIndex.toString() + 'ButtonId').show();\n            }\n            else\n            {\n                $('#reading' + readingIndex.toString() + 'ButtonId').hide();\n            }\n        }\n        function showEditDeviceButtons(showButton)\n        {\n            for (var ii = 0; ii < readings.length; ++ii) showEditDeviceButton(ii, showButton);\n            \n        }\n        function enableSetting(settingIndex,enable)\n        { \n            $('#setting' + settingIndex.toString() + 'InputId').attr('disabled',!enable);\n            \n        }\n        function showSettingsChangedButton(showButton)\n        {\n            for (var ii = 0; ii < settings.length; ++ii) showSettingChangedButton(ii, showButton);\n            \n        }\n        function enableSettings(enable) \n        {   \n            for (var ii = 0; ii < settings.length; ++ii) enableSetting(ii,enable);\n            showEditDeviceButtons(enable);\n\n        }\n        function settingChange(settingIndex)\n        {\n            settings[settingIndex].changed = true;\n            $('#setting' + settingIndex.toString() + 'ButtonId').show();\n        }\n        function changeSetting(settingIndex)\n        {\n            $('#setting' + settingIndex.toString() + 'ButtonId').hide();\n            if (isNaN($('#setting' + settingIndex.toString() + 'InputId').val()))\n            {\n                settings[settingIndex].changed = false;\n                return;\n            }\n            var payload = {'attr': settings[settingIndex].deviceAttr, 'value':Number($('#setting' + settingIndex.toString() + 'InputId').val())};\n            sendSetting(payload);\n            settings[settingIndex].changed = false;\n        }\n        function createSettingsCard()\n        {\n            let table = document.createElement('table');\n                table.setAttribute('width', '100%');\n            for (var ii = 0; ii < settings.length; ++ii)\n            {\n                var row = document.createElement('tr');\n                    var td1 = document.createElement('td');\n                        td1.setAttribute('width', '60%');\n                        var span1 = document.createElement('span');\n                            span1.innerHTML = settings[ii].label;\n                            span1.setAttribute('class', 'card-text');\n                        td1.appendChild(span1);\n                    row.appendChild(td1);\n                    var td2 = document.createElement('td');\n                        td2.setAttribute('width', '20%');\n                        var input1 = document.createElement('input');\n                            input1.setAttribute('id', 'setting' + ii.toString() + 'InputId');\n                            input1.setAttribute('class', 'big-text');\n                            input1.setAttribute('type', 'text');\n                            input1.setAttribute('value', '0');\n                            input1.setAttribute('size', '8');\n                            input1.setAttribute('oninput', 'settingChange(' + ii.toString() + ')');\n                        td2.appendChild(input1);\n                    row.appendChild(td2);\n                    var td3 = document.createElement('td');\n                        td3.setAttribute('width', '20%');\n                        var button1 = document.createElement('button');\n                            button1.setAttribute('id', 'setting' + ii.toString() + 'ButtonId');\n                            button1.setAttribute('class', 'btn btn-block card-button big-text');\n                            button1.setAttribute('onclick', 'changeSetting(' + ii.toString() + ')');\n                            button1.innerHTML = '&#10003;';\n                        td3.appendChild(button1);\n                    row.appendChild(td3);\n                table.appendChild(row);\n            }\n            let rowDiv = document.createElement('div');\n                rowDiv.setAttribute('class','row');\n                rowDiv.setAttribute('style','padding-top: 0px;');\n                rowDiv.appendChild(table);\n            let cardBodyDiv = document.createElement('div');\n                cardBodyDiv.setAttribute('class','card-body');\n                cardBodyDiv.setAttribute('align','center');\n                cardBodyDiv.appendChild(rowDiv);\n            let cardTitle = document.createElement('p');\n                cardTitle.setAttribute('class','card-title');\n                cardTitle.innerHTML = 'Settings';\n            document.getElementById('settingsCard').appendChild(cardTitle);\n            document.getElementById('settingsCard').appendChild(cardBodyDiv);\n            showSettingsChangedButton(false);\n            enableSettings(false);\n        }\n        function createReadingsCard()\n        {\n            let table = document.createElement('table');\n                table.setAttribute('width', '100%');\n            for (var ii = 0; ii < readings.length; ++ii)\n            {\n                var row = document.createElement('tr');\n                    var td1 = document.createElement('td');\n                        td1.setAttribute('width', '60%');\n                        var span1 = document.createElement('span');\n                            span1.innerHTML = readings[ii].label;\n                            span1.setAttribute('class', 'card-text');\n                        td1.appendChild(span1);\n                    row.appendChild(td1);\n                    var td2 = document.createElement('td');\n                        td2.setAttribute('width', '20%');\n                        var span2 = document.createElement('span');\n                            span2.setAttribute('class', 'card-text');\n                            span2.setAttribute('id', 'reading' + ii.toString() + 'Id');\n                            span2.innerHTML = '?';\n                        td2.appendChild(span2);\n                    row.appendChild(td2);\n                    var td3 = document.createElement('td');\n                        td3.setAttribute('width', '20%');\n                        var button1 = document.createElement('button');\n                            button1.setAttribute('class', 'btn btn-block card-button big-text');\n                            button1.setAttribute('id', 'reading' + ii.toString() + 'ButtonId');\n                            button1.setAttribute('onclick', 'editDevice(\"' + readings[ii].deviceAttr + '\")');\n                            button1.innerHTML = 'Edit';\n                        td3.appendChild(button1);\n                    row.appendChild(td3);\n                table.appendChild(row);\n            }\n            let rowDiv = document.createElement('div');\n                rowDiv.setAttribute('class','row');\n                rowDiv.setAttribute('style','padding-top: 0px;');\n                rowDiv.appendChild(table);\n            let cardBodyDiv = document.createElement('div');\n                cardBodyDiv.setAttribute('class','card-body');\n                cardBodyDiv.setAttribute('align','center');\n                cardBodyDiv.appendChild(rowDiv);\n            let cardTitle = document.createElement('p');\n                cardTitle.setAttribute('class','card-title');\n                cardTitle.innerHTML = 'Readings';\n            document.getElementById('readingsCard').appendChild(cardTitle);\n            document.getElementById('readingsCard').appendChild(cardBodyDiv);\n            showEditDeviceButtons(false);\n        }\n        function sendSetting(payload)\n        {\n            var actionMsg = \n                {\n                    topic   : appDeviceInfo.config.project + '/' +  appDeviceInfo.config.deviceType + '/' +  appDeviceInfo.config.name + '/setting/setting',\n                    payload : payload\n                };\n            sendActionMsg('setting','setting',actionMsg);\n        }\n",
-        "output": "str",
-        "x": 690,
-        "y": 1000,
-        "wires": [
-            [
-                "ec9f5cf5ef3c56c1"
-            ]
-        ]
-    },
-    {
-        "id": "de09c957a3da801d",
-        "type": "subflow:8341090a.df9758",
-        "z": "b8a9252872fb4fd5",
-        "name": "",
-        "x": 1190,
-        "y": 1000,
-        "wires": []
-    },
-    {
-        "id": "865a01f155f31651",
-        "type": "template",
-        "z": "b8a9252872fb4fd5",
-        "name": "script.transferFunction",
-        "field": "payload.script.transferFunction",
-        "fieldType": "msg",
-        "format": "javascript",
-        "syntax": "mustache",
-        "template": "        var transferFunctionView = 0;\n        function viewTransferFunction(fnotch, flpf)\n        {\n            if (transferFunctionView == 0)\n            {\n                magPhasetransferFunctionPlot(fnotch, flpf);\n            }\n            if (transferFunctionView == 1)\n            {\n                realImagtransferFunctionPlot(fnotch, flpf);\n            }\n            \n        }\n        function toggleTransferView()\n        {\n            transferFunctionView = transferFunctionView + 1;\n            if (transferFunctionView > 1) transferFunctionView = 0;\n            if (appDeviceInfo.device != null) viewTransferFunction(appDeviceInfo.device.notchFreq.value * 1000, appDeviceInfo.device.lpfFreq.value * 1000);\n\n            \n        }\n        function transferFunction(freq, fnotch, flpf)\n        {\n            let thetaNotch = 2.0 * Math.PI * freq / fnotch;\n            let thetaLpf = freq / flpf;\n            let lpfDenom = 1.0 + thetaLpf * thetaLpf;\n            let notchReal = (1.0 - Math.cos(thetaNotch));\n            let notchImag = Math.sin(thetaNotch);\n            let lpfReal = 1.0 / lpfDenom;\n            let lpfImag = -thetaLpf / lpfDenom;\n            let tfReal = notchReal * lpfReal - notchImag * lpfImag;\n            let tfImag = notchImag * lpfReal + notchReal * lpfImag;\n            return [tfReal,tfImag];\n        }\n        function magPhasetransferFunctionPlot(fnotch, flpf)\n        {\n            let nptsPerDecade = 100;\n            let startDecade = 2;\n            let stopDecade = 5;\n            let layout =\n            {\n                showlegend  : true,\n                legend      : \n                { \n                    x: 0, y: 1.15,\n                    font: {size:20}\n                },\n                height      : '600',\n                width       : '',\n                xaxis       :\n                {\n                    type            : 'log',\n                    autorange       : true,\n                    tickangle       : '0',\n                    tickfont        : {size: 30}\n                },\n                yaxis:\n                {\n                    title           : 'Gain (dB)',\n                    titlefont       : {color: '#557a95',size: 30},\n                    tickfont        : {color: '#557a95',size: 30},\n                    gridcolor       : '#beceda',\n                    zerolinecolor   : '#beceda',\n                    linecolor       : '#beceda',\n                    range: [-40, 0],\n                    dtick: 5\n                },\n                yaxis2:\n                {\n                    title           : 'Phase (deg)',\n                    titlefont       : {color: '#569556',size: 30},\n                    tickfont        : {color: '#569556',size: 30},\n                    gridcolor       : '#beceda',\n                    zerolinecolor   : '#beceda',\n                    linecolor       : '#beceda',\n                    overlaying: 'y',\n                    side: 'right',\n                    range: [-180, 180],\n                    dtick: 45\n                },\n    \n                margin: \n                {\n                    t: 30, //top margin\n                    l: 150, //left margin\n                    r: 150, //right margin\n                    b: 100 //bottom margin\n                },\n            };\n            magTrace = \n            {\n                x: [],\n                y: [],\n                name: 'Gain (dB)',\n                yaxis: 'y1',\n                type: 'scatter',\n                mode: 'lines',\n                line: {color: 'blue'}\n            };\n            phaseTrace = \n            {\n                x: [],\n                y: [],\n                name: 'Phase (deg)',\n                yaxis: 'y2',\n                type: 'scatter',\n                mode: 'lines',\n                line: {color: 'green'}\n            };\n            let ln10 = Math.log(10.0);\n            for (var id = startDecade; id < stopDecade; ++id)\n            {\n                for (var ip = 0; ip < nptsPerDecade; ++ip)\n                {\n                    let freq = Math.exp((id + ip / nptsPerDecade) * ln10);\n                    let tf = transferFunction(freq, fnotch, flpf);\n                    magTrace.x.push(freq);\n                    magTrace.y.push(10.0 * Math.log10(tf[0] * tf[0] + tf[1] * tf[1]));\n                    phaseTrace.x.push(freq);\n                    phaseTrace.y.push(180.0 * Math.atan2(tf[1],tf[0]) / Math.PI);\n                }\n            }    \n            Plotly.newPlot(\"transferFunctionChart\", [magTrace, phaseTrace], layout);\n            \n        }\n        function realImagtransferFunctionPlot(fnotch, flpf)\n        {\n            let nptsPerDecade = 100;\n            let startDecade = 2;\n            let stopDecade = 5;\n            let layout =\n            {\n                showlegend  : true,\n                legend      : \n                { \n                    x: 0, y: 1.15,\n                    font: {size:20}\n                },\n                height      : '600',\n                width       : '',\n                xaxis       :\n                {\n                    type            : 'log',\n                    autorange       : true,\n                    tickangle       : '0',\n                    tickfont        : {size: 30}\n                },\n                yaxis:\n                {\n                    title           : 'Gain ',\n                    titlefont       : {color: '#557a95',size: 30},\n                    tickfont        : {color: '#557a95',size: 30},\n                    gridcolor       : '#beceda',\n                    zerolinecolor   : '#beceda',\n                    linecolor       : '#beceda'\n//                    range: [-1, 1],\n//                    dtick: 0.2\n                },\n\n                margin: \n                {\n                    t: 30, //top margin\n                    l: 150, //left margin\n                    r: 150, //right margin\n                    b: 100 //bottom margin\n                },\n            };\n            realTrace = \n            {\n                x: [],\n                y: [],\n                name: 'Real',\n                yaxis: 'y1',\n                type: 'scatter',\n                mode: 'lines',\n                line: {color: 'blue'}\n            };\n            imagTrace = \n            {\n                x: [],\n                y: [],\n                name: 'Imag',\n                yaxis: 'y1',\n                type: 'scatter',\n                mode: 'lines',\n                line: {color: 'green'}\n            };\n            let ln10 = Math.log(10.0);\n            for (var id = startDecade; id < stopDecade; ++id)\n            {\n                for (var ip = 0; ip < nptsPerDecade; ++ip)\n                {\n                    let freq = Math.exp((id + ip / nptsPerDecade) * ln10);\n                    let tf = transferFunction(freq, fnotch, flpf);\n                    realTrace.x.push(freq);\n                    realTrace.y.push(tf[0]);\n                    imagTrace.x.push(freq);\n                    imagTrace.y.push(tf[1]);\n                }\n            }    \n            Plotly.newPlot(\"transferFunctionChart\", [realTrace, imagTrace], layout);\n            \n        }\n        function toggleArchive()\n        {\n            switch (archiveView)\n            {\n                case 0:\n                    plotWeekly();\n                    break;\n                case 1:\n                    plotMonthly();\n                    break;\n                case 2:\n                    plotDaily();\n                    break;\n            }\n        }\n",
-        "output": "str",
-        "x": 680,
-        "y": 960,
-        "wires": [
-            [
-                "5b652b6153978bc3"
+                "f75b9887786b11c4"
             ]
         ]
     }

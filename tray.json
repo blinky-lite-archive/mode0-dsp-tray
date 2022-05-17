@@ -1,11 +1,28 @@
 {
-  "deviceType": "blinky-rpmode0-dsp",
+  "type": "blinky-rpmode0-dsp",
   "name": "01",
   "arcPeriod": 60000,
-  "timeStamp": 1634109573209,
-  "lastArchive": 1634109544163,
-  "settingInProgress": 0,
-  "archiveNow": 0,
+  "timeStamp": 1646408271939,
+  "watchdog": {
+    "action": "reading",
+    "type": "scalar",
+    "value": 1722,
+    "unit": "",
+    "alarm": {
+      "value": 0,
+      "limits": {
+        "lolo": -1,
+        "low": 0,
+        "high": 40000,
+        "hihi": 50000
+      },
+      "notify": {
+        "name": "",
+        "number": "",
+        "time": 0
+      }
+    }
+  },
   "systemOn": {
     "action": "setting",
     "type": "scalar",

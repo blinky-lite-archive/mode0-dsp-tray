@@ -1,12 +1,11 @@
-# blinky-modbus-tray
+# mirrotron-rf-src-tray
 ## need to add .env file with the following
-PROJECT=blinky-lite-v3  
-MQTTDEVICEA=blinky-lite-v3/blinky-modbus/01/setting/#  
-MQTTCLIENTID=blinky-modbus-tray-01  
+MQTTSUBSCRIBE=mirrotron/rf-src/01/setting/#  
+MQTTCLIENTID=mirrotron-rf-src-tray-01  
 MQTTSERVERIP=something.cloudmqtt.com  
 MQTTUSERNAME=xxxx  
 MQTTPASSWORD=yyyy  
-SERIALPORT=/dev/ttyACM3  
+PM2NAME=rf-src  
 NODEREDCONFIGSECRET=a-secret-key    
 
 with no CR after the last line
