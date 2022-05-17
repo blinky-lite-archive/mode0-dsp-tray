@@ -1,11 +1,11 @@
-# blinky-rpmode0-dsp-tray
+# mode0-dsp-tray
 ## need to add .env file with the following
-MQTTSUBSCRIBE=blinky-lite-v4/blinky-rpmode0-dsp/01/setting/#  
-MQTTCLIENTID=blinky-rpmode0-dsp-01  
+MQTTSUBSCRIBE=blinky-lite-v4/mode0-dsp/01/setting/#  
+MQTTCLIENTID=mode0-dsp-01  
 MQTTSERVERIP=something.cloudmqtt.com  
 MQTTUSERNAME=xxxx  
 MQTTPASSWORD=yyyy  
-PM2NAME=blinky-rpmode0-dsp-01  
+PM2NAME=mode0-dsp-01  
 NODEREDCONFIGSECRET=a-secret-key    
 
 with no CR after the last line

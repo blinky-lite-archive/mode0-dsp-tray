@@ -1,12 +1,12 @@
 {
-  "type": "blinky-rpmode0-dsp",
+  "type": "mode0-dsp",
   "name": "01",
   "arcPeriod": 60000,
   "timeStamp": 1646408271939,
   "watchdog": {
     "action": "reading",
     "type": "scalar",
-    "value": 1722,
+    "value": 437,
     "unit": "",
     "alarm": {
       "value": 0,
